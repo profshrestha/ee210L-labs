@@ -20,13 +20,9 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 10 | [Memory Basics](labs/lab-10-memory-basics/README.md) | FPGA board |
 | 11 | [FPGA Design Project](labs/lab-11-fpga-design-project/README.md) | FPGA board |
 
-Labs 8–11 run on the FPGA board and will be posted before those meetings.
-
-Each lab folder contains the lab instructions (`README.md`) and a report template to download and fill in.
-
 ## Lab Equipment
 
-Each station has a breadboard, digital multimeter (DMM), resistor kit, DC power supply, oscilloscope, function generator, and a computer with a Verilog toolchain. FPGA boards are used in the second half of the course.
+Each station has a digital multimeter (DMM), DC power supply, oscilloscope, function generator, and a computer with a Verilog toolchain. FPGA boards are used in the second half of the course.
 
 ## Parts Kit
 
