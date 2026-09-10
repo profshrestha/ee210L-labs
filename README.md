@@ -15,14 +15,16 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 5 | [Adders and Comparators](labs/lab-05-adders-and-comparators/README.md) | 74LS283, 74LS85 |
 | 6 | [Latches and Flip-Flops](labs/lab-06-latches-and-flip-flops/README.md) | 74LS279, 74LS74, 74LS73 |
 | 7 | [Shift Registers and Counters](labs/lab-07-shift-registers-and-counters/README.md) | 74LS194, 74LS163, 74LS90 |
-| 8 | [Combinational Logic in Verilog](labs/lab-08-combinational-logic-in-verilog/README.md) | FPGA board |
-| 9 | [Sequential Logic in Verilog](labs/lab-09-sequential-logic-in-verilog/README.md) | FPGA board |
-| 10 | [Memory Basics](labs/lab-10-memory-basics/README.md) | FPGA board |
-| 11 | [FPGA Design Project](labs/lab-11-fpga-design-project/README.md) | FPGA board |
+| 8 | [Combinational Logic in Verilog](labs/lab-08-combinational-logic-in-verilog/README.md) | Simulation only |
+| 9 | [Sequential Logic in Verilog](labs/lab-09-sequential-logic-in-verilog/README.md) | Simulation only |
+| 10 | [First FPGA Design](labs/lab-10-first-fpga-design/README.md) | PYNQ-Z2 |
+| 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | PYNQ-Z2 |
 
 ## Lab Equipment
 
-Each station has a digital multimeter (DMM), DC power supply, oscilloscope, function generator, and a computer with a Verilog toolchain. FPGA boards are used in the second half of the course.
+Each station has a digital multimeter (DMM), DC power supply, oscilloscope, function generator, and a computer with a Verilog toolchain.
+
+Labs 8 and 9 are simulation only. Labs 10 and 11 use the **PYNQ-Z2** board (Xilinx Zynq XC7Z020, part `xc7z020clg400-1`) with Vivado.
 
 ## Parts Kit
 
