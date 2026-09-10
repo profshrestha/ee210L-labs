@@ -131,7 +131,7 @@ start of lab. It must be **hand-written and hand-drawn** in a physical notebook 
    package along with V_CC and GND. The pin numbers are listed in §3.3; your drawing should
    add the gate symbols and show which pins connect to which gate, as in the example below.
 
-<img src="7408-pinout-example.svg" alt="Pinout drawing of a 7408 quad 2-input AND gate showing all four gates, pin numbers, VCC on pin 14 and GND on pin 7" width="380">
+<img src="7408-pinout-example.png" alt="Pinout drawing of a 7408 quad 2-input AND gate showing all four gates, the numbered pins, and the power pins 14 and 7 highlighted" width="330">
 
 There are six ICs to draw: the 74LS00, 74LS02, 74LS04, 74LS08, 74LS32, and 74LS86. Remember
 that the 74LS02 does not follow the same input/output order as the others, and that the
