@@ -123,7 +123,7 @@ complement of the binary index.
 1. With the power off, place the 74LS138. Wire **pin 16 to +5 V** and **pin 8 to GND**.
 2. Enable the chip: `E̅1` (pin 4) to GND, `E̅2` (pin 5) to GND, `E3` (pin 6) to +5 V.
 3. Wire the address inputs `A0`, `A1`, `A2` to the rails.
-4. Have the circuit checked, then power on.
+4. Power on.
 5. Step the address through all eight combinations. For each, find which output is LOW and
    record its measured voltage, plus the voltage of one output that stayed HIGH.
 6. Confirm the pattern matches your pre-lab truth table.

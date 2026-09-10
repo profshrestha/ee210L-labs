@@ -120,7 +120,7 @@ far faster than debugging on a breadboard.
 1. With the power supply off, build your minimized majority voter on the breadboard.
 2. Power both chips you use: pin 14 to +5 V, pin 7 to GND on each.
 3. Wire the three inputs to the rails with jumper wires.
-4. Have the circuit checked, then power it on.
+4. Power it on.
 5. Step through all eight input combinations. Record the measured output voltage and the
    logic level for each.
 6. Confirm the result matches your pre-lab truth table.

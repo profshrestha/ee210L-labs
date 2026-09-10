@@ -155,7 +155,7 @@ Latches 1 and 3 have two set inputs that are internally ANDed; tie the unused on
 
 1. With the power off, build the cross-coupled NAND latch of §3.1 using two gates of the
    74LS00. Wire `S̅` and `R̅` to the rails.
-2. Have it checked, then power on with both inputs HIGH.
+2. Power on with both inputs HIGH.
 3. Pulse `S̅` LOW and back HIGH. Record `Q` and `Q̅`.
 4. Pulse `R̅` LOW and back HIGH. Record `Q` and `Q̅`.
 5. Return both inputs HIGH and confirm the latch holds its last state. Move the input wires

@@ -142,8 +142,8 @@ nonsense for equal inputs.
 
 1. With the power off, build a half adder using one XOR gate (74LS86) and one AND gate
    (74LS08).
-2. Have it checked, power on, and step through all four input combinations. Record the
-   measured `S` and `C` voltages and logic levels.
+2. Power on and step through all four input combinations. Record the measured `S` and `C`
+   voltages and logic levels.
 3. Confirm it matches your pre-lab truth table.
 
 ### 5.2 Full Adder

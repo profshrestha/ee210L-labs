@@ -162,7 +162,7 @@ counter, or use a NAND gate wired as an inverter from the 74LS00.
    (`J = K = 1`, `CLR̅` HIGH). Remember: **V_CC on pin 4, GND on pin 11.**
 2. Clock the first stage from the function generator at 10 kHz. Wire `1Q` (pin 12) into
    `2CLK` (pin 5).
-3. Have it checked, then power on.
+3. Power on.
 4. Put scope channel 1 on the clock and channel 2 on `1Q`. Record the frequency of each.
    Move channel 2 to `2Q` (pin 9) and record that frequency.
 5. **Find the ripple.** Put channel 1 on `1Q` and channel 2 on `2Q`. Trigger on the falling

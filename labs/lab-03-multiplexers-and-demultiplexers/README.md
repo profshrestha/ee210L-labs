@@ -108,7 +108,7 @@ You will do this with the 74LS138 in §5.5. Its pinout is in
 2. Tie the enable `E̅` (pin 7) to GND so the chip is active.
 3. Set up a distinctive fixed pattern on the eight data inputs: tie `D0`, `D2`, `D4`, `D6`
    to +5 V and `D1`, `D3`, `D5`, `D7` to GND.
-4. Have the circuit checked, then power on.
+4. Power on.
 5. Step the select inputs `S2 S1 S0` through all eight combinations. For each, record the
    measured voltage at `Y` (pin 5) and at `W` (pin 6), and the logic level of each.
 6. Confirm that `Y` reproduces the pattern you wired and that `W` is always its complement.

@@ -117,14 +117,6 @@ the GND rail (logic 0).
 To read an output, put the DMM in DC voltage mode with the black lead on GND and the red
 lead on the output pin. Convert the reading to a logic level using the table in §3.1.
 
-> **Optional — LED indicator.** If your station has LEDs, wire the LED as
-> `+5 V → resistor → LED anode`, `LED cathode → gate output pin`. A 74LS output can only
-> *source* about 0.4 mA when HIGH, but can *sink* 8 mA when LOW, so an LED wired this way
-> lights when the output is **LOW**. Sizing the resistor for about 5 mA gives
-> R = (5 V − 2 V) / 5 mA ≈ 620 Ω, so use 470 Ω or 680 Ω from your kit. Remember the
-> indication is inverted: **LED on = logic 0**. Use the DMM as the authority for your data
-> tables.
-
 ## 4. Pre-Lab
 
 Do this before you come to lab.
@@ -155,12 +147,11 @@ Do this before you come to lab.
 2. Wire **pin 14 to +5 V** and **pin 7 to GND**.
 3. Wire inputs `1A` (pin 1) and `1B` (pin 2) to the rails using two jumper wires. Start
    with both at GND.
-4. Have your instructor or lab assistant check the circuit before you turn on power.
-5. Turn on the supply. Measure the voltage at output `1Y` (pin 3) with the DMM and record
+4. Turn on the supply. Measure the voltage at output `1Y` (pin 3) with the DMM and record
    it.
-6. Step through all four input combinations by moving the two input jumpers. For each row,
+5. Step through all four input combinations by moving the two input jumpers. For each row,
    record the measured output voltage and the logic level it corresponds to.
-7. Compare against the AND truth table from your pre-lab.
+6. Compare against the AND truth table from your pre-lab.
 
 ### 5.3 OR, NOT, NAND, NOR, XOR
 
