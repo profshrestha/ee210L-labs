@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 430" width="430" height="430" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="430" height="430" fill="#ffffff"/>
+
+  <g stroke="#222" stroke-width="2" fill="none" stroke-linecap="square">
+
+    <!-- package body -->
+    <rect x="110" y="45" width="200" height="350" rx="4" fill="#E8D5B7"/>
+    <!-- notch at top -->
+    <path d="M198,45 A12,12 0 0,0 222,45" fill="#ffffff"/>
+    <!-- pin 1 dot -->
+    <circle cx="128" cy="63" r="5" fill="#222"/>
+
+    <!-- pin stubs, left -->
+    <path d="M110,75 H75  M110,125 H75  M110,175 H75  M110,225 H75  M110,275 H75  M110,325 H75  M110,375 H75"/>
+    <!-- pin stubs, right -->
+    <path d="M310,75 H345  M310,125 H345  M310,175 H345  M310,225 H345  M310,275 H345  M310,325 H345  M310,375 H345"/>
+
+    <!-- gate 1: in 1,2 -> out 3 -->
+    <path d="M150,80 h15 a20,20 0 0,1 0,40 h-15 z" fill="#ffffff"/>
+    <path d="M110,75 H135 V90 H150"/>
+    <path d="M110,125 H135 V110 H150"/>
+    <path d="M185,100 H200 V175 H110"/>
+
+    <!-- gate 2: in 4,5 -> out 6 -->
+    <path d="M150,230 h15 a20,20 0 0,1 0,40 h-15 z" fill="#ffffff"/>
+    <path d="M110,225 H135 V240 H150"/>
+    <path d="M110,275 H135 V260 H150"/>
+    <path d="M185,250 H200 V325 H110"/>
+
+    <!-- gate 3: in 13,12 -> out 11 -->
+    <path d="M235,130 h15 a20,20 0 0,1 0,40 h-15 z" fill="#ffffff"/>
+    <path d="M310,125 H225 V140 H235"/>
+    <path d="M310,175 H225 V160 H235"/>
+    <path d="M270,150 H288 V225 H310"/>
+
+    <!-- gate 4: in 10,9 -> out 8 -->
+    <path d="M235,280 h15 a20,20 0 0,1 0,40 h-15 z" fill="#ffffff"/>
+    <path d="M310,275 H225 V290 H235"/>
+    <path d="M310,325 H225 V310 H235"/>
+    <path d="M270,300 H288 V375 H310"/>
+
+    <!-- pin number boxes, left -->
+    <rect x="42" y="63" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="113" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="163" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="213" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="263" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="313" width="33" height="24" fill="#ffffff"/>
+    <rect x="42" y="363" width="33" height="24" fill="#F5C6C6"/>
+    <!-- pin number boxes, right -->
+    <rect x="345" y="63" width="33" height="24" fill="#F5C6C6"/>
+    <rect x="345" y="113" width="33" height="24" fill="#ffffff"/>
+    <rect x="345" y="163" width="33" height="24" fill="#ffffff"/>
+    <rect x="345" y="213" width="33" height="24" fill="#ffffff"/>
+    <rect x="345" y="263" width="33" height="24" fill="#ffffff"/>
+    <rect x="345" y="313" width="33" height="24" fill="#ffffff"/>
+    <rect x="345" y="363" width="33" height="24" fill="#ffffff"/>
+  </g>
+
+  <g font-size="15" fill="#222" text-anchor="middle">
+    <text x="58" y="81">1</text>
+    <text x="58" y="131">2</text>
+    <text x="58" y="181">3</text>
+    <text x="58" y="231">4</text>
+    <text x="58" y="281">5</text>
+    <text x="58" y="331">6</text>
+    <text x="58" y="381">7</text>
+    <text x="361" y="81">14</text>
+    <text x="361" y="131">13</text>
+    <text x="361" y="181">12</text>
+    <text x="361" y="231">11</text>
+    <text x="361" y="281">10</text>
+    <text x="361" y="331">9</text>
+    <text x="361" y="381">8</text>
+  </g>
+
+  <g font-size="15" fill="#222">
+    <text x="388" y="81">VCC</text>
+    <text x="36" y="381" text-anchor="end">GND</text>
+  </g>
+
+  <text x="210" y="418" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">7408</text>
+</svg>

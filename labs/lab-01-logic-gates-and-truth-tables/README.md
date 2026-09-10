@@ -119,13 +119,23 @@ lead on the output pin. Convert the reading to a logic level using the table in 
 
 ## 4. Pre-Lab
 
-Do this before you come to lab.
+**Bring your logic ICs, breadboard, DMM, and parts kit to lab.**
+
+Complete the pre-lab before you arrive. There is nothing to submit: show me your work at the
+start of lab. It must be **hand-written and hand-drawn** in a physical notebook or notepad.
 
 1. Write out the truth tables for 2-input AND, OR, NAND, NOR, and XOR, and for NOT.
 2. Using only NAND gates, sketch a circuit for NOT, one for AND, and one for OR. You will
    build these in §5.6.
-3. Look up how many gates are on each chip and confirm each gate's pin numbers against the
-   pinouts in §3.3.
+3. Draw the pinout of each IC you will use in this lab, showing the logic gates inside the
+   package along with V_CC and GND. The pin numbers are listed in §3.3; your drawing should
+   add the gate symbols and show which pins connect to which gate, as in the example below.
+
+<img src="7408-pinout-example.svg" alt="Pinout drawing of a 7408 quad 2-input AND gate showing all four gates, pin numbers, VCC on pin 14 and GND on pin 7" width="380">
+
+There are six ICs to draw: the 74LS00, 74LS02, 74LS04, 74LS08, 74LS32, and 74LS86. Remember
+that the 74LS02 does not follow the same input/output order as the others, and that the
+74LS04 has six inverters rather than four two-input gates.
 
 ## 5. Lab Work
 
