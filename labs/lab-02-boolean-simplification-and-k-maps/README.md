@@ -40,7 +40,7 @@ A K-map is the truth table redrawn so that physically adjacent cells differ in e
 variable. That adjacency is what lets you spot terms that cancel.
 
 A 4-variable map is laid out with the row and column labels in **Gray code** order
-(`00, 01, 11, 10`) — not counting order. That ordering is the whole point: it guarantees
+(`00, 01, 11, 10`), not counting order. That ordering is the whole point: it guarantees
 neighbors differ by one bit.
 
 ```
@@ -59,10 +59,10 @@ neighbors differ by one bit.
 
 Rules for grouping:
 
-1. Groups must contain 1, 2, 4, 8, ... cells — always a power of two.
+1. Groups must contain 1, 2, 4, 8, ... cells, always a power of two.
 2. Groups must be rectangular and contain only 1s (or don't-cares).
 3. Bigger groups are better. Each doubling of a group removes one variable from the term.
-4. Groups may wrap around the edges of the map — left to right and top to bottom.
+4. Groups may wrap around the edges of the map, left to right and top to bottom.
 5. Groups may overlap. Cover every 1 at least once, using as few and as large groups as
    possible.
 
@@ -70,7 +70,7 @@ Rules for grouping:
 
 Some input combinations never occur in a real system. A BCD digit, for instance, never
 takes the values 10 through 15. Those rows are marked `X` (don't-care) and you may treat
-each one as either 0 or 1 — whichever makes your groups larger. Don't-cares are free
+each one as either 0 or 1, whichever makes your groups larger. Don't-cares are free
 simplification; use them.
 
 ## 4. Pre-Lab
@@ -80,7 +80,7 @@ Do all of this before you come to lab. You will build these circuits, so bring t
 ### 4.1 Majority Voter
 
 A 3-input majority voter outputs 1 when two or more of its inputs are 1. This is real
-engineering — redundant flight and reactor control systems vote three sensors against each
+engineering. Redundant flight and reactor control systems vote three sensors against each
 other so that a single failed sensor cannot control the output.
 
 1. Write the complete truth table for `M(A,B,C)`.
@@ -137,7 +137,7 @@ far faster than debugging on a breadboard.
 
 For **both** functions, fill in the comparison table in your report: gate count, chip
 count, and number of IC packages required for the unminimized SOP versus your minimized
-version. You do not have to build the unminimized versions — count them on paper.
+version. You do not have to build the unminimized versions; count them on paper.
 
 ### 5.5 Shut Down
 

@@ -24,7 +24,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 ### 3.1 Logic Levels
 
-The 74LS family runs on a 5 V supply. A digital signal is not just "on" or "off" — it is a
+The 74LS family runs on a 5 V supply. A digital signal is not just "on" or "off". It is a
 voltage that falls into one of three bands:
 
 | Band | Voltage | Meaning |
@@ -50,7 +50,7 @@ On every 14-pin IC in this lab:
 - **Pin 7 = GND**
 - **Pin 14 = V_CC (+5 V)**
 
-Both must be connected or the chip will not work — the gates do not get power from their
+Both must be connected or the chip will not work. The gates do not get power from their
 inputs.
 
 ### 3.3 Pinouts
@@ -97,14 +97,14 @@ inputs.
 ```
 
 `A` and `B` are inputs, `Y` is the output. The leading number selects which gate on the
-chip you are using — `1A`, `1B`, `1Y` are the three pins of gate 1.
+chip you are using. `1A`, `1B`, and `1Y` are the three pins of gate 1.
 
 The 74LS02 pin order is the classic wiring mistake in this lab. Check it twice.
 
 ### 3.4 Floating Inputs
 
 An unconnected TTL input is called a **floating** input. It tends to behave like a logic 1,
-but it is not reliable — it picks up noise from your hand, nearby wires, and the bench.
+but it is not reliable. It picks up noise from your hand, nearby wires, and the bench.
 
 **Every input you are using must be wired to either +5 V or GND.** Never leave an input
 you care about dangling in the air.
@@ -141,7 +141,7 @@ Do this before you come to lab.
 > **Build every circuit with the power supply off.** Turn it on only after you have
 > checked your wiring.
 
-### 5.2 First Circuit — AND Gate (74LS08)
+### 5.2 First Circuit: AND Gate (74LS08)
 
 1. Place the 74LS08 across the center channel of the breadboard, straddling the gap.
 2. Wire **pin 14 to +5 V** and **pin 7 to GND**.
@@ -188,9 +188,9 @@ restored at each stage rather than degrading.
 Using **only** the 74LS00, build each of the following from your pre-lab sketches and
 record a full truth table for each:
 
-1. **NOT** — tie both inputs of one NAND gate together and drive them from a single wire.
-2. **AND** — a NAND followed by a NAND-wired inverter.
-3. **OR** — invert both inputs with NAND-wired inverters, then feed both into a NAND.
+1. **NOT**: tie both inputs of one NAND gate together and drive them from a single wire.
+2. **AND**: a NAND followed by a NAND-wired inverter.
+3. **OR**: invert both inputs with NAND-wired inverters, then feed both into a NAND.
 
 You have four NAND gates on the chip, which is exactly enough for the OR circuit. For each
 circuit, record the truth table and confirm it matches the gate you were trying to build.

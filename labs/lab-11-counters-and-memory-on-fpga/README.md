@@ -44,8 +44,8 @@ Vivado has no timing target and will happily build a design that fails on hardwa
 ### 3.2 Dividing the Clock
 
 125 MHz is 125 million edges per second. A counter clocked directly at that rate cycles
-through all 16 states in 128 nanoseconds — the LEDs would appear uniformly dim, not
-counting.
+through all 16 states in 128 nanoseconds, so the LEDs would appear uniformly dim rather
+than counting.
 
 The fix is a **clock divider**: a wide counter whose top bit toggles slowly.
 
@@ -71,7 +71,7 @@ end
 ```
 
 Everything stays on the one 125 MHz clock, and `tick` decides which edges count. Generating
-a real second clock by dividing in fabric — using `divider[26]` as another module's `clk` —
+a real second clock by dividing in fabric, using `divider[26]` as another module's `clk`,
 creates a clock the timing tools cannot analyze properly and is one of the classic
 beginner mistakes in FPGA design. Use clock enables.
 
@@ -105,7 +105,7 @@ end
 ```
 
 The two-flip-flop chain at the top is a **synchronizer**. A button press is asynchronous to
-your clock, so it can violate setup and hold time and drive a flip-flop metastable — the
+your clock, so it can violate setup and hold time and drive a flip-flop metastable, the
 condition described in Lab 6 §3.4. Two flip-flops in series give any metastable state a
 full clock period to settle before the rest of the design sees it. Every asynchronous input
 into a synchronous design needs this.
@@ -144,7 +144,7 @@ end
 ```
 
 The Zynq XC7Z020 contains 140 **block RAMs** of 36 kbit each. A 16×4 memory is far too small
-to justify one, so the synthesizer will build it from **distributed RAM** — the LUTs
+to justify one, so the synthesizer will build it from **distributed RAM**: the LUTs
 themselves, used as storage. You will see which one it chose in the utilization report.
 
 Notice that reads are clocked in both examples. A registered read output is what allows the
@@ -197,7 +197,7 @@ silently cost you far more logic on a large memory.
 3. Note in your report how this display differs from the binary counter, and connect it back
    to what you saw on the 74LS194 in Lab 7.
 
-### 5.4 Button as a Clock Enable — Without Debouncing
+### 5.4 Undebounced Button as a Clock Enable
 
 1. Modify your counter so it advances on a **raw** button press instead of the `tick`
    signal. Detect the press with a rising-edge detector:
@@ -211,7 +211,7 @@ silently cost you far more logic on a large memory.
 3. Record the count after ten presses. It will almost certainly not be 10.
 4. Repeat the ten presses three more times and record each result.
 
-### 5.5 Button as a Clock Enable — Debounced
+### 5.5 Debounced Button as a Clock Enable
 
 1. Add the debouncer from §3.3 and take your edge detector from the debounced signal instead
    of the raw pin.

@@ -23,7 +23,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 ### 3.1 Storage from Feedback
 
-Everything so far has been combinational — the output depended only on the present inputs.
+Everything so far has been combinational: the output depended only on the present inputs.
 Feed a gate's output back to its own input and the circuit gains **memory**: the output now
 depends on what happened before.
 
@@ -45,7 +45,7 @@ sets `Q = 1`; pulling `R̅` LOW resets `Q = 0`.
 
 ### 3.2 The Forbidden State
 
-Pull `S̅` and `R̅` LOW at the same time and both outputs go HIGH — so `Q` and `Q̅` are equal,
+Pull `S̅` and `R̅` LOW at the same time and both outputs go HIGH, so `Q` and `Q̅` are equal,
 which contradicts what those labels mean. Worse, when you release both inputs together the
 latch settles into whichever state wins a race between the two gates. Which one wins
 depends on manufacturing tolerances and temperature, so the result is genuinely
@@ -57,7 +57,7 @@ practical flip-flop design makes it impossible to reach.
 A **latch** is transparent: while its enable is asserted, the output follows the input
 continuously. Whatever noise appears on `D` during that window lands in the latch.
 
-A **flip-flop** samples its input only at a clock **edge** — an instant rather than a
+A **flip-flop** samples its input only at a clock **edge**, an instant rather than a
 window. Everything in a synchronous digital system is built from edge-triggered flip-flops
 for exactly this reason: it confines the moment when data can change to a single, known
 point in time.
@@ -88,7 +88,7 @@ mostly about proving setup and hold are never violated.
                         └───────────────┘
 ```
 
-`PRE̅` (preset) and `CLR̅` (clear) are **active-low, asynchronous** — they force the output
+`PRE̅` (preset) and `CLR̅` (clear) are **active-low, asynchronous**: they force the output
 immediately, ignoring the clock. **Tie both to +5 V** whenever you are not deliberately
 using them, or the flip-flop will not respond to its clock at all.
 
@@ -190,7 +190,7 @@ Latches 1 and 3 have two set inputs that are internally ANDed; tie the unused on
 ### 5.4 Propagation Delay
 
 1. Put scope channel 1 on `1CLK` (pin 3) and channel 2 on `1Q` (pin 5).
-2. Raise the clock to 100 kHz and set `D` so the output is actually changing — the easiest
+2. Raise the clock to 100 kHz and set `D` so the output is actually changing. The easiest
    way is the toggle wiring of §5.6.
 3. Trigger on the rising edge of the clock and expand the horizontal scale until you can see
    the gap between the clock edge and the output transition.
@@ -200,13 +200,13 @@ Latches 1 and 3 have two set inputs that are internally ANDed; tie the unused on
 
 ### 5.5 JK Flip-Flop
 
-1. Power off. Place the 74LS73 — **V_CC on pin 4, GND on pin 11.** Check it twice.
+1. Power off. Place the 74LS73. **V_CC goes on pin 4 and GND on pin 11.** Check it twice.
 2. Tie `1CLR̅` (pin 2) to +5 V.
 3. Drive `1CLK` (pin 1) from the function generator at 1 kHz.
 4. Wire `1J` (pin 14) and `1K` (pin 3) to the rails.
 5. Power on and test all four `J`/`K` combinations. For each, record `1Q` (pin 12) and
    confirm it matches the table in §3.6. For the toggle case, use the scope rather than the
-   DMM — the output is a square wave, not a static level.
+   DMM, because the output is a square wave, not a static level.
 
 ### 5.6 Toggle Mode and Frequency Division
 

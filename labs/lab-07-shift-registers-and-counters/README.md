@@ -26,13 +26,13 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 In a **ripple** (asynchronous) counter, each flip-flop is clocked by the output of the one
 before it. Stage 1 toggles, which clocks stage 2, which clocks stage 3, and so on. The
-count is correct once everything settles, but the stages do not change at the same instant
-— the change ripples down the chain, one propagation delay per stage.
+count is correct once everything settles, but the stages do not change at the same instant.
+The change ripples down the chain, one propagation delay per stage.
 
 That has a real consequence. Between the clock edge and the moment the last stage settles,
 the counter's outputs pass through **transient states that are not part of the count
 sequence**. Going from 0111 to 1000, a ripple counter may momentarily show 0110, 0100, and
-0000 before landing on 1000. Anything watching those outputs — a decoder, for example —
+0000 before landing on 1000. Anything watching those outputs, a decoder for example,
 will see brief false pulses called **decoding glitches**.
 
 In a **synchronous** counter, every flip-flop is clocked from the same signal at the same
@@ -58,7 +58,7 @@ designs almost never use ripple counters for anything that other logic watches.
 
 - `QA` is the least significant output bit, `QD` the most significant.
 - `A`–`D` are the parallel load data inputs.
-- `CLR̅` (pin 1) and `LOAD̅` (pin 9) are both **synchronous** — they take effect on the next
+- `CLR̅` (pin 1) and `LOAD̅` (pin 9) are both **synchronous**: they take effect on the next
   rising clock edge, not immediately. This is the key difference between the 74LS163 and the
   otherwise-identical 74LS161, whose clear is asynchronous.
 - `ENP` and `ENT` must both be HIGH for the counter to count.
@@ -73,7 +73,7 @@ where you want it to restart and use that to assert `CLR̅` or `LOAD̅`.
 For a mod-10 counter (0 through 9), decode state 9 (`1001`) with a NAND gate on `QD` and
 `QA`, and feed the result into `CLR̅`. On the next rising edge, the synchronous clear takes
 the counter to 0000 instead of 10. Because the clear is synchronous, the counter never
-actually displays state 10 — not even for a nanosecond. Doing this on a chip with an
+actually displays state 10, not even for a nanosecond. Doing this on a chip with an
 asynchronous clear produces a brief glitch at state 10, which is a classic source of hard-
 to-find bugs.
 
@@ -120,10 +120,10 @@ The two mode-select pins choose what happens on each rising clock edge:
 
 | S1 | S0 | Mode |
 |---|---|---|
-| 0 | 0 | Hold — outputs do not change |
-| 0 | 1 | Shift right — `QA → QB → QC → QD`, `SR SER` enters at `QA` |
-| 1 | 0 | Shift left — `QD → QC → QB → QA`, `SL SER` enters at `QD` |
-| 1 | 1 | Parallel load — `A B C D` are captured |
+| 0 | 0 | Hold: outputs do not change |
+| 0 | 1 | Shift right: `QA → QB → QC → QD`, `SR SER` enters at `QA` |
+| 1 | 0 | Shift left: `QD → QC → QB → QA`, `SL SER` enters at `QD` |
+| 1 | 1 | Parallel load: `A B C D` are captured |
 
 `CLR̅` (pin 1) is asynchronous and active low. Tie it HIGH except when clearing.
 
@@ -132,11 +132,11 @@ The two mode-select pins choose what happens on each rising clock edge:
 Feed a shift register's output back to its own serial input and it counts by circulating a
 pattern rather than by binary arithmetic.
 
-- **Ring counter** — `QD` back to `SR SER`. Load a single 1 and it walks around the four
+- **Ring counter**: `QD` back to `SR SER`. Load a single 1 and it walks around the four
   positions: `1000 → 0100 → 0010 → 0001 → 1000`. Four states, and each state is already
   decoded on its own output line, which is why ring counters are used to sequence machinery
   without any decoding logic.
-- **Johnson counter** — `Q̅D` back to `SR SER` instead. The inverted feedback gives eight
+- **Johnson counter**: `Q̅D` back to `SR SER` instead. The inverted feedback gives eight
   states from four flip-flops: `0000 → 1000 → 1100 → 1110 → 1111 → 0111 → 0011 → 0001 →
   0000`. Twice the states of a ring counter, and only two-input gates are needed to decode
   any one of them.
@@ -194,9 +194,9 @@ counter, or use a NAND gate wired as an inverter from the 74LS00.
 
 ### 5.4 Decade Counter (74LS90)
 
-1. Power off. Place the 74LS90 — **V_CC on pin 5, GND on pin 10.** Check twice.
-2. Tie all four reset pins — `R0(1)` (pin 2), `R0(2)` (pin 3), `R9(1)` (pin 6), `R9(2)`
-   (pin 7) — to GND.
+1. Power off. Place the 74LS90. **V_CC goes on pin 5 and GND on pin 10.** Check twice.
+2. Tie all four reset pins to GND: `R0(1)` (pin 2), `R0(2)` (pin 3), `R9(1)` (pin 6), and
+   `R9(2)` (pin 7).
 3. Wire `QA` (pin 12) to `CKB` (pin 1) to chain the ÷2 and ÷5 sections into ÷10.
 4. Clock `CKA` (pin 14) at about 2 Hz.
 5. Power on and record ten consecutive states of `QD QC QB QA`. Confirm it counts 0 through
@@ -228,8 +228,8 @@ counter, or use a NAND gate wired as an inverter from the 74LS00.
 
 ### 5.7 Johnson Counter
 
-1. Power off. Take `QD` (pin 12) through an inverter — use a spare NAND gate on the 74LS00
-   with both inputs tied together — and feed the inverted signal to `SR SER` (pin 2).
+1. Power off. Take `QD` (pin 12) through an inverter, using a spare NAND gate on the 74LS00
+   with both inputs tied together, and feed the inverted signal to `SR SER` (pin 2).
 2. Power on. Clear the register with `CLR̅`, then shift right.
 3. Record the outputs for at least ten consecutive clock edges and confirm the sequence has
    a period of eight.

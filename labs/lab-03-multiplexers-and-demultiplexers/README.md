@@ -48,18 +48,18 @@ If `S2 S1 S0 = 101` (decimal 5), then `Y = D5`, and the other seven inputs are i
                         └───────────────┘
 ```
 
-- `Y` (pin 5) is the output. `W` (pin 6) is the complement of `Y` — free inversion.
+- `Y` (pin 5) is the output. `W` (pin 6) is the complement of `Y`, giving you free inversion.
 - `E̅` (pin 7) is the **active-low** enable. Tie it to GND to turn the chip on. When it is
   HIGH, `Y` is forced LOW no matter what the data and select inputs are doing.
 - `S0` is the least significant select bit and `S2` is the most significant. Note that they
-  are **not** in pin order — check §3.2 carefully when wiring.
+  are **not** in pin order, so check §3.2 carefully when wiring.
 
 This is a 16-pin package: **pin 16 is V_CC and pin 8 is GND**, not pins 14 and 7.
 
 ### 3.3 A Multiplexer Is a Lookup Table
 
 Here is the useful trick. Feed the variables of a logic function into the select inputs and
-wire each data input to a constant 1 or 0 — whatever that row of the truth table requires.
+wire each data input to a constant 1 or 0, whatever that row of the truth table requires.
 The multiplexer then *is* the function. Any 3-variable function at all, with no gates and
 no minimization.
 
@@ -86,7 +86,7 @@ This is called the **residue** method, and it is how a single 8:1 MUX handles an
 ### 3.5 Demultiplexers
 
 A demultiplexer is the reverse of a multiplexer: one data input is routed to one of many
-outputs, chosen by the select lines. A decoder with an enable input *is* a demultiplexer —
+outputs, chosen by the select lines. A decoder with an enable input *is* a demultiplexer:
 feed your data into the enable pin and the select code picks which output it appears on.
 You will do this with the 74LS138 in §5.5. Its pinout is in
 [Lab 4, §3.2](../lab-04-decoders-and-encoders/README.md#32-74ls138-pinout).
@@ -144,13 +144,13 @@ what the enable does and why a shared bus needs one.
 
 1. Power off. Place the 74LS138 (**pin 16 to +5 V, pin 8 to GND**).
 2. Tie `E̅1` (pin 4) and `E̅2` (pin 5) to GND. These are active-low enables.
-3. Pin 6 (`E3`) is the active-HIGH enable — this is your **data input**.
+3. Pin 6 (`E3`) is the active-HIGH enable, and this is your **data input**.
 4. Wire the address inputs `A0` (pin 1), `A1` (pin 2), `A2` (pin 3) to the rails.
 5. Power on. Set the address to `010` and toggle the data input on pin 6 between GND and
    +5 V. Record the voltage on every output `Y0`–`Y7` for both data values.
 6. Repeat for address `101`.
 7. Note in your report which output responded to the data and what the other seven did.
-   The 74LS138 outputs are **active LOW** — the selected output goes to 0, not 1.
+   The 74LS138 outputs are **active LOW**: the selected output goes to 0, not 1.
 
 ### 5.6 Shut Down
 

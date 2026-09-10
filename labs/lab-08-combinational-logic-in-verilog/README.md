@@ -5,7 +5,7 @@
 Check Canvas for deliverables, deadlines, and grading rubric.
 
 This lab is **simulation only**. You will not use the FPGA board. The goal is to learn the
-language and the simulator without also fighting the hardware flow — that comes in Lab 10.
+language and the simulator without also fighting the hardware flow. That comes in Lab 10.
 
 ## 1. Objectives
 
@@ -56,7 +56,7 @@ endmodule
 ```
 
 - `input` and `output` declare the direction of each port.
-- `wire` is a connection that carries a value from a driver — it cannot store anything.
+- `wire` is a connection that carries a value from a driver, and it cannot store anything.
 - `assign` creates a **continuous assignment**: the left side always tracks the right side.
 
 ### 3.3 Vectors
@@ -150,12 +150,12 @@ endmodule
 ```
 
 - `dut` stands for device under test. The `.a(a)` syntax connects testbench signal `a` to
-  port `a` of the module — always connect ports by name, never by position.
+  port `a` of the module. Always connect ports by name, never by position.
 - `#10` waits 10 time units so the output settles before you check it.
 - `!==` compares including the `x` (unknown) and `z` (high-impedance) states, which `!=`
   does not. Use `!==` in testbenches or a design outputting `x` will silently pass.
 - A testbench that prints PASS or FAIL is called **self-checking**. Reading waveforms by eye
-  does not scale — even here it is 8 cases, and a 4-bit adder has 512.
+  does not scale. Even here it is 8 cases, and a 4-bit adder has 512.
 
 ## 4. Pre-Lab
 
@@ -177,7 +177,7 @@ endmodule
 ### 5.1 Project Setup and First Simulation
 
 1. Create a new RTL project in Vivado. When asked, do **not** specify sources yet, and pick
-   any part — this project is simulation only, so the part does not matter.
+   any part, since this project is simulation only, so the part does not matter.
 2. Add a design source named `majority.v` and enter the module from §3.2.
 3. Add a simulation source named `majority_tb.v` and enter the testbench from §3.5.
 4. Run behavioral simulation. Confirm the Tcl console prints `PASS: all cases correct`.
@@ -185,7 +185,7 @@ endmodule
 
 ### 5.2 Break It on Purpose
 
-1. Change the `majority` module so it computes `(a & b) | (b & c)` — dropping the `a & c`
+1. Change the `majority` module so it computes `(a & b) | (b & c)`, dropping the `a & c`
    term.
 2. Re-run the simulation. Record exactly what the testbench prints and which case or cases
    fail.
@@ -214,7 +214,7 @@ without you reading anything.
    ```
 3. Run it and confirm all 16 cases pass. Capture the waveform.
 4. Confirm that exactly one of `gt`, `eq`, `lt` is high in every case. Add that as a check
-   in your testbench — it catches a whole class of bugs that checking the three outputs
+   in your testbench. It catches a whole class of bugs that checking the three outputs
    individually would miss.
 
 ### 5.4 Inferred Latch

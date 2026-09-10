@@ -31,7 +31,7 @@ C = A · B
 It is called "half" because it has nowhere to accept a carry coming in from a lower bit
 position, which makes it useless for anything but the least significant bit.
 
-A **full adder** adds three bits — `A`, `B`, and a carry in — and produces a sum and a
+A **full adder** adds three bits (`A`, `B`, and a carry in) and produces a sum and a
 carry out:
 
 ```
@@ -72,7 +72,7 @@ four discrete full adders wired together.
 - `C4` (pin 9) is the carry out.
 - 16-pin package: **pin 16 = V_CC, pin 8 = GND**.
 
-The pin ordering on this chip is scattered — bits are not grouped together. Build a wiring
+The pin ordering on this chip is scattered, and bits are not grouped together. Build a wiring
 table before you touch the breadboard.
 
 ### 3.4 Subtraction by Two's Complement
@@ -152,13 +152,13 @@ nonsense for equal inputs.
 2. Power on and step through all eight combinations of `A`, `B`, `C_in`. Record `S` and
    `C_out` for each.
 3. Confirm it matches your pre-lab truth table. Pay attention to the two rows where the
-   sum is 1 but the carry differs — those are the rows a half adder cannot handle.
+   sum is 1 but the carry differs. Those are the rows a half adder cannot handle.
 
 ### 5.3 Four-Bit Addition
 
 1. Power off. Place the 74LS283 (**pin 16 to +5 V, pin 8 to GND**) and tie `C0` (pin 7) to
    GND.
-2. Wire the eight data inputs to the rails. Build the wiring table first — the pin order is
+2. Wire the eight data inputs to the rails. Build the wiring table first, because the pin order is
    not sequential.
 3. Power on. Enter `A = 9 (1001)` and `B = 6 (0110)`. Record `Σ4 Σ3 Σ2 Σ1` and `C4`.
 4. Repeat for `A = 9`, `B = 11 (1011)`.
@@ -177,7 +177,7 @@ nonsense for equal inputs.
    `7 − 3 = 4`. Record the result.
 4. Compute `12 − 5` and one subtraction of your choosing where the result is negative.
    Record the 4-bit output and `C4` for each.
-5. Note in your report what `C4` means during subtraction — it is no longer an overflow
+5. Note in your report what `C4` means during subtraction. It is no longer an overflow
    flag, it tells you whether the result came out non-negative.
 
 ### 5.5 Magnitude Comparator
@@ -189,7 +189,7 @@ nonsense for equal inputs.
 4. Power on and test at least six input pairs, including one where `A > B`, one where
    `A < B`, one where `A = B`, and one pair that differs only in the least significant bit.
    Record all three outputs for each pair.
-5. Now set the cascade inputs incorrectly — pin 3 to GND — and re-test the case where
+5. Now set the cascade inputs incorrectly, with pin 3 to GND, and re-test the case where
    `A = B`. Record what happens and explain why in your report.
 
 ### 5.6 Shut Down

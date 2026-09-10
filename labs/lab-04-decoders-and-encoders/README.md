@@ -26,7 +26,7 @@ takes a 3-bit address `A2 A1 A0` and drives one of `Y0`–`Y7`.
 
 The important detail: **the 74LS138 outputs are active LOW**. The selected output goes to
 0 V and all seven others sit at about 3.4 V. This is the opposite of what most students
-expect, and it is deliberate — active-low outputs were cheaper and faster to build in
+expect, and it is deliberate. Active-low outputs were cheaper and faster to build in
 bipolar logic, and they chain naturally into active-low enables on other chips.
 
 ### 3.2 74LS138 Pinout
@@ -48,7 +48,7 @@ bipolar logic, and they chain naturally into active-low enables on other chips.
 - `A0` is the least significant address bit.
 - The chip is enabled only when `E̅1 = 0` **and** `E̅2 = 0` **and** `E3 = 1`. If any of those
   three conditions fails, all outputs stay HIGH.
-- `Y0` is on pin 15 and `Y7` is on pin 7 — the outputs run **backwards** relative to pin
+- `Y0` is on pin 15 and `Y7` is on pin 7, so the outputs run **backwards** relative to pin
   order. Wire carefully.
 - 16-pin package: **pin 16 = V_CC, pin 8 = GND**.
 
@@ -58,7 +58,7 @@ Each decoder output corresponds to exactly one minterm of the address variables.
 low precisely when `A2 A1 A0 = 101`, which is the minterm `A2·A1'·A0`.
 
 So any function of three variables is just the OR of the decoder outputs for its minterms.
-But since the outputs are active low, you do not OR them — you **NAND** them. By De
+But since the outputs are active low, you do not OR them; you **NAND** them. By De
 Morgan's law:
 
 ```
@@ -76,7 +76,7 @@ index of the active one. The obvious problem is what happens when two inputs are
 once. A **priority** encoder resolves this by always reporting the highest-numbered active
 input and ignoring the rest.
 
-This is exactly how interrupt controllers work — several devices can request service
+This is exactly how interrupt controllers work. Several devices can request service
 simultaneously, and the encoder reports the most urgent one.
 
 ### 3.5 74LS148 Pinout
@@ -95,7 +95,7 @@ simultaneously, and the encoder reports the most urgent one.
                         └───────────────┘
 ```
 
-Everything on this chip is **active low** — the inputs, the address outputs, and the status
+Everything on this chip is **active low**: the inputs, the address outputs, and the status
 outputs. An input is "requesting" when it is at 0 V, and the address outputs are the
 complement of the binary index.
 
@@ -143,7 +143,7 @@ With the address set to `011`:
 1. Power off. Keep the decoder wired and enabled.
 2. Connect the decoder outputs for the minterms of `F = Σm(1, 2, 4, 7)` to the inputs of a
    NAND gate on the 74LS00. You have four minterms and the 74LS00 gates have two inputs
-   each, so you will need to combine them — two NANDs feeding a third stage. Work out the
+   each, so you will need to combine them, with two NANDs feeding a third stage. Work out the
    arrangement and check it against De Morgan's law before you wire it.
 3. Power on and step through all eight address combinations. Record the measured output and
    logic level for each.

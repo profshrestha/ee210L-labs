@@ -39,7 +39,7 @@ endmodule
 
 `always @(posedge clk)` means "on every rising edge of `clk`, do this." That single line is
 what tells the synthesizer to build a flip-flop rather than a wire. Here `q` genuinely is a
-register — unlike the `reg` declarations in Lab 8, which were combinational despite the
+register, unlike the `reg` declarations in Lab 8, which were combinational despite the
 keyword.
 
 ### 3.2 Blocking vs Non-Blocking
@@ -55,7 +55,7 @@ This is the most important rule in the whole lab.
 statement sees the new value.
 
 **Non-blocking** (`<=`) evaluates every right-hand side first, then updates every left-hand
-side simultaneously at the end of the time step. That is exactly what real flip-flops do —
+side simultaneously at the end of the time step. That is exactly what real flip-flops do:
 they all sample their inputs at the same clock edge, and none of them sees another's new
 output until after the edge.
 
@@ -118,7 +118,7 @@ reg clk = 1'b0;
 always #5 clk = ~clk;      // toggles every 5 ns -> 10 ns period -> 100 MHz
 ```
 
-Note this uses a blocking assignment, and that is correct — the clock generator is
+Note this uses a blocking assignment, and that is correct, because the clock generator is
 testbench code, not hardware being synthesized.
 
 A typical reset sequence at the start of a testbench:
@@ -149,7 +149,7 @@ endmodule
 
 `count <= count + 1'b1` reads the current value of the register and writes back the
 incremented value on the next edge. The `else if (en)` with no final `else` is correct here
-and does **not** infer a latch — inside a clocked block, "no assignment" simply means the
+and does **not** infer a latch. Inside a clocked block, "no assignment" simply means the
 flip-flop holds, which is what an enable is supposed to do. Latch inference is only a
 concern in combinational blocks.
 
@@ -159,7 +159,7 @@ concern in combinational blocks.
 2. Write a 4-bit shift register that shifts right, with a serial input `sin`.
 3. Predict, on paper, the value of `q1` and `q2` after three clock edges for both versions
    of the code in §3.2, starting from `q1 = q2 = 0` and holding `d = 1`.
-4. State which reset style — synchronous or asynchronous — matches the 74LS163 you used in
+4. State which reset style, synchronous or asynchronous, matches the 74LS163 you used in
    Lab 7, and which matches the 74LS74.
 
 ## 5. Lab Work
@@ -179,7 +179,7 @@ concern in combinational blocks.
 1. Create two modules: `dff_sync_rst` and `dff_async_rst`, using the two styles from §3.3.
 2. Instantiate **both** in a single testbench, driving them from the same `clk`, `d`, and
    `rst`.
-3. Assert `rst` in the middle of a clock period — not aligned with an edge — and hold it
+3. Assert `rst` in the middle of a clock period, not aligned with an edge, and hold it
    for less than one full clock cycle.
 4. Capture the waveform showing both outputs. Record which one responded immediately and
    which one waited for the next edge.
@@ -190,7 +190,7 @@ concern in combinational blocks.
 ### 5.3 Blocking vs Non-Blocking
 
 1. Create `shift_nonblocking.v` with the two-stage shift register from §3.2 using `<=`.
-2. Create `shift_blocking.v` — identical, but using `=`.
+2. Create `shift_blocking.v`, identical but using `=`.
 3. Instantiate both in one testbench with a shared clock. Hold `d = 1` and let at least
    four clock edges pass.
 4. Capture the waveform showing `q1` and `q2` from both modules.

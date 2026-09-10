@@ -1,4 +1,4 @@
-# Lab 10: First FPGA Design — From Verilog to Hardware
+# Lab 10: First FPGA Design
 
 **[Download the Lab 10 Report Template (PDF)](EE210L-Lab10-Report-Template.pdf)**
 
@@ -32,7 +32,7 @@ memory: feed it the input combination as an address and it returns the stored ou
 Six inputs, one output, and 64 bits of storage is enough to implement *any* 6-input Boolean
 function just by changing what is stored.
 
-That is what a bitstream is — the contents of every LUT and the setting of every
+That is what a bitstream is: the contents of every LUT and the setting of every
 interconnect switch. Programming an FPGA does not run a program on it. It rewires it.
 
 Because a LUT implements any function of its inputs at the same cost, minimizing a function
@@ -44,7 +44,7 @@ now.
 
 The PYNQ-Z2 is built around a Zynq XC7Z020, which contains both an ARM processor system
 (PS) and FPGA fabric (PL). This course uses **only the PL**. You will not create a block
-design or instantiate the processor — plain Verilog and a constraints file are enough.
+design or instantiate the processor. Plain Verilog and a constraints file are enough.
 
 User I/O connected to the PL:
 
@@ -98,7 +98,7 @@ indices. A mismatch produces an error at implementation, not at synthesis, so it
 several minutes after you made the mistake.
 
 `LVCMOS33` means 3.3 V CMOS signaling. Unlike the 5 V TTL levels of the 74LS parts, FPGA
-I/O runs at 3.3 V — never connect a 5 V signal to an FPGA pin.
+I/O runs at 3.3 V. Never connect a 5 V signal to an FPGA pin.
 
 ### 3.4 The Flow
 
@@ -116,7 +116,8 @@ Knowing which stage failed tells you where to look.
 
 1. Bring your working `majority.v` and `compare2.v` from Lab 8.
 2. Write the top-level module you will use in §5.2. It must have ports named to match the
-   XDC in §3.3 — `sw[1:0]`, `btn[3:0]`, `led[3:0]` — and it should wire the majority voter's
+   XDC in §3.3 (`sw[1:0]`, `btn[3:0]`, `led[3:0]`), and it should
+   wire the majority voter's
    three inputs to `sw[0]`, `sw[1]`, and `btn[0]`, with the result on `led[0]`.
 3. Write the full XDC file you will need for that design. You only need constraint lines
    for the ports your top module actually uses; extra lines for unused ports cause errors.
@@ -170,7 +171,7 @@ LUTs did it take here, and why is that number so small compared with the size of
 
 ### 5.5 Break a Constraint on Purpose
 
-1. Change one pin assignment in your XDC to a different valid pin — for example, move
+1. Change one pin assignment in your XDC to a different valid pin. For example, move
    `led[0]` from `R14` to `P14`.
 2. Rebuild the bitstream and reprogram.
 3. Record what the board does now. Note in your report that the Verilog never changed, and

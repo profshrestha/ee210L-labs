@@ -1,4 +1,4 @@
-# EE 210L — Digital Circuits and Logic Design Lab
+# EE 210L: Digital Circuits and Logic Design Lab
 
 Lab instructions and report templates for EE 210L.
 
