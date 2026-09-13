@@ -1,6 +1,6 @@
 # Lab 9: Sequential Logic in Verilog
 
-**[Download the Lab 9 Report Template (PDF)](EE210L-Lab9-Report-Template.pdf)**
+**[Download the Lab 9 Report (PDF)](EE210L-Lab9-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -238,5 +238,5 @@ The waveform shows you the symptom. The schematic shows you the cause.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your source code, all waveform captures, and the flip-flop counts from §5.3.

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 9 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 9: Sequential Logic in Verilog</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Keep these designs. You will put them on the FPGA board in Lab 11.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: D Flip-Flop</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 1: D flip-flop waveform. Mark one edge where d changed early but q waited.</p>
+  </div>
+  <p class="q">Does q ever change between clock edges?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Synchronous vs Asynchronous Reset</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 2: Both reset styles, reset asserted mid-cycle.</p>
+  </div>
+  <table>
+    <tr><th>Reset style</th><th>Responded immediately?</th><th>Waited for clock edge?</th><th>Caught the short pulse?</th></tr>
+    <tr><td>Asynchronous</td><td></td><td></td><td></td></tr>
+    <tr><td>Synchronous</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Which 74LS chip from Lab 6 or 7 matches each style?</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">When would missing a short reset pulse be a bug, and when would it be a feature?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Blocking vs Non-Blocking</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 3: Both shift registers on one waveform.</p>
+  </div>
+  <table>
+    <tr><th rowspan="2">Clock edge</th><th colspan="2">Non-blocking (&lt;=)</th><th colspan="2">Blocking (=)</th></tr>
+    <tr><th>q1</th><th>q2</th><th>q1</th><th>q2</th></tr>
+    <tr><td>start</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <table>
+    <tr><th>Version</th><th>Flip-flops in the synthesized schematic</th></tr>
+    <tr><td>Non-blocking</td><td></td></tr>
+    <tr><td>Blocking</td><td></td></tr>
+  </table>
+  <p class="q">Did the results match your pre-lab prediction? Explain the hardware difference in your own words.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Four-Bit Counter</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 4: Counter wrapping from 1111 to 0000.</p>
+  </div>
+  <p>Self-checking result:</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">Does en = 0 hold the count?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Shift Register with Modes</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 5: All four modes exercised in sequence.</p>
+  </div>
+  <table>
+    <tr><th>Mode</th><th>Expected behavior</th><th>Observed behavior</th><th>Match?</th></tr>
+    <tr><td>00 hold</td><td></td><td></td><td></td></tr>
+    <tr><td>01 shift right</td><td></td><td></td><td></td></tr>
+    <tr><td>10 shift left</td><td></td><td></td><td></td></tr>
+    <tr><td>11 load</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Does this match what you measured on the 74LS194 in Lab 7?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: Ring Counter</h3>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 6: Ring counter, at least eight clock edges.</p>
+  </div>
+  <div class="field">Period of the pattern: <span class="blank" style="max-width:100pt"></span> <span class="unit">clock edges</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: the rule for when to use &lt;= versus =, why non-blocking matches what real flip-flops do, and which reset style you would choose inside an FPGA.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>
