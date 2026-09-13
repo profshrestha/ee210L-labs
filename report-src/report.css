@@ -44,3 +44,14 @@ p + .lines, p + .idrow { break-before: avoid; }
 .figblock { break-inside: avoid; margin-bottom: 10pt; }
 
 .codebox { border: 1px solid #000; min-height: 130pt; font-family: "Courier New", monospace; font-size: 9.5pt; padding: 6pt; white-space: pre-wrap; }
+
+.footnote {
+  position: fixed;
+  bottom: 0.3in;
+  left: 0.75in;
+  right: 0.75in;
+  text-align: center;
+  font-size: 8pt;
+  font-style: italic;
+  color: #555;
+}
