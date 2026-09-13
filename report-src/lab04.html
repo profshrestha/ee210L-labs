@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 4 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 4: Decoders and Encoders</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Both chips in this lab use active-low outputs. Record the actual measured voltage and then state the logic level.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Decoder Truth Table</h3>
+  <table>
+    <tr><th>A2</th><th>A1</th><th>A0</th><th>Output that went LOW</th><th>Its measured V (V)</th><th>A HIGH output&rsquo;s V (V)</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Enable Behavior</h3>
+  <p class="note">Address held at 011 throughout.</p>
+  <table class="wide">
+    <tr><th>Condition</th><th>V at Y3 (V)</th><th>Y3 logic level</th><th>State of the other outputs</th></tr>
+    <tr><td>Enabled (E&#772;1 = 0, E&#772;2 = 0, E3 = 1)</td><td></td><td></td><td></td></tr>
+    <tr><td>E&#772;1 taken HIGH</td><td></td><td></td><td></td></tr>
+    <tr><td>E3 taken LOW</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Why does a decoder provide three separate enable pins instead of one?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: A Function from Decoder Outputs</h3>
+  <p>F(A2,A1,A0) = &Sigma;m(1, 2, 4, 7)</p>
+  <div class="figblock">
+    <p class="note">Draw the gate arrangement you used to combine the four active-low decoder outputs. Label every pin.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: Combining decoder outputs to form F.</p>
+  </div>
+  <table>
+    <tr><th>A2</th><th>A1</th><th>A0</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected F</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Priority Encoder Basics</h3>
+  <table class="wide">
+    <tr><th>Input held LOW</th><th>A&#772;2</th><th>A&#772;1</th><th>A&#772;0</th><th>Decimal index<br>(after inverting)</th><th>G&#772;S</th><th>E&#772;O</th></tr>
+    <tr><td>None (all HIGH)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;6</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;7</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">With no input requesting, what distinguishes the output code from a genuine request on input 0?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Priority Resolution</h3>
+  <table class="wide">
+    <tr><th>Inputs held LOW</th><th>A&#772;2</th><th>A&#772;1</th><th>A&#772;0</th><th>Decimal index<br>reported</th><th>G&#772;S</th></tr>
+    <tr><td>I&#772;2 only</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;2 and I&#772;5</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;2, I&#772;5 and I&#772;7</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;2 and I&#772;5 (I&#772;7 released)</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Which input wins when several request at once, and why is that the behavior an interrupt controller needs?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: why active-low outputs lead to a NAND rather than an OR in Part 5.3, what G&#772;S is for, and how E&#772;O would let you cascade two encoders into a 16-input priority encoder.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>
