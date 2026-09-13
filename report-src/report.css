@@ -9,16 +9,17 @@ body {
 h1.title { text-align: center; font-size: 14pt; margin: 0 0 2pt; }
 h2.subtitle { text-align: center; font-size: 12pt; font-weight: normal; margin: 0 0 14pt; }
 
-.idrow { display: flex; gap: 24pt; margin-bottom: 8pt; }
+.idrow { display: flex; gap: 24pt; margin-bottom: 8pt; break-inside: avoid; }
 .idfield { flex: 1; display: flex; align-items: baseline; gap: 6pt; }
 .idfield .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; }
 
 .instructions { color: #1a3d8f; font-style: italic; margin: 10pt 0 16pt; }
 
-.part { margin-top: 16pt; break-inside: avoid; }
+.part { margin-top: 16pt; }
 .part > h3.parthead {
   font-size: 12pt; margin: 0 0 6pt; padding-bottom: 2pt;
   border-bottom: 1px solid #000;
+  break-after: avoid;
 }
 h4.subhead { font-size: 11pt; margin: 12pt 0 4pt; break-after: avoid; }
 p.note { color: #1a3d8f; font-style: italic; margin: 0 0 6pt; }
@@ -29,14 +30,28 @@ table th, table td { border: 1px solid #000; padding: 4pt 6pt; text-align: cente
 table th { background: #dbe5f1; font-weight: bold; }
 table.wide td:first-child, table.wide th:first-child { text-align: left; }
 
-.field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; }
+.field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; break-inside: avoid; }
 .field .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; max-width: 320pt; }
 .field .unit { white-space: nowrap; }
 
-.lines { margin: 6pt 0 10pt; }
+.lines { margin: 6pt 0 10pt; break-inside: avoid; }
 .lines .line { border-bottom: 1px solid #000; height: 22pt; }
+p + .lines, p + .idrow { break-before: avoid; }
 
 .box { border: 1px solid #000; height: 130pt; break-inside: avoid; }
 .caption { text-align: center; font-size: 10pt; margin: 4pt 0 10pt; }
 
 .figblock { break-inside: avoid; margin-bottom: 10pt; }
+
+.codebox { border: 1px solid #000; min-height: 130pt; font-family: "Courier New", monospace; font-size: 9.5pt; padding: 6pt; white-space: pre-wrap; }
+
+.footnote {
+  position: fixed;
+  bottom: 0.3in;
+  left: 0.75in;
+  right: 0.75in;
+  text-align: center;
+  font-size: 8pt;
+  font-style: italic;
+  color: #555;
+}
