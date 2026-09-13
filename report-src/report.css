@@ -9,7 +9,7 @@ body {
 h1.title { text-align: center; font-size: 14pt; margin: 0 0 2pt; }
 h2.subtitle { text-align: center; font-size: 12pt; font-weight: normal; margin: 0 0 14pt; }
 
-.idrow { display: flex; gap: 24pt; margin-bottom: 8pt; }
+.idrow { display: flex; gap: 24pt; margin-bottom: 8pt; break-inside: avoid; }
 .idfield { flex: 1; display: flex; align-items: baseline; gap: 6pt; }
 .idfield .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; }
 
@@ -30,11 +30,12 @@ table th, table td { border: 1px solid #000; padding: 4pt 6pt; text-align: cente
 table th { background: #dbe5f1; font-weight: bold; }
 table.wide td:first-child, table.wide th:first-child { text-align: left; }
 
-.field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; }
+.field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; break-inside: avoid; }
 .field .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; max-width: 320pt; }
 .field .unit { white-space: nowrap; }
 
-.lines { margin: 6pt 0 10pt; }
+.lines { margin: 6pt 0 10pt; break-inside: avoid; }
+p + .lines, p + .idrow { break-before: avoid; }
 .lines .line { border-bottom: 1px solid #000; height: 22pt; }
 
 .box { border: 1px solid #000; height: 130pt; break-inside: avoid; }

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 6 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 6: Latches and Flip-Flops</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">The 74LS73 uses V_CC on pin 4 and GND on pin 11. Confirm your wiring before applying power.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: NAND SR Latch</h3>
+  <table>
+    <tr><th>S&#772;</th><th>R&#772;</th><th>Q</th><th>Q&#772;</th><th>Behavior (set / reset / hold / forbidden)</th></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.1.1 Forbidden State: Release Test</h4>
+  <p class="note">Take both inputs LOW, then release both at once. Record where the latch lands. Repeat five times.</p>
+  <table>
+    <tr><th>Trial</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+    <tr><td>Q after release</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Was the result the same every time? Explain what determines the outcome.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: 74LS279 Quad SR Latch</h3>
+  <table>
+    <tr><th>S&#772;</th><th>R&#772;</th><th>Measured V at Q (V)</th><th>Q</th><th>Behavior</th></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: D Flip-Flop (74LS74)</h3>
+
+  <h4 class="subhead">5.3.1 Clocked Operation</h4>
+  <table>
+    <tr><th>D</th><th>Q after several clock edges</th><th>Q&#772;</th></tr>
+    <tr><td>1</td><td></td><td></td></tr>
+    <tr><td>0</td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.3.2 Transparency Check</h4>
+  <table>
+    <tr><th>Clock held at</th><th>Does Q follow changes on D?</th></tr>
+    <tr><td>HIGH (static)</td><td></td></tr>
+    <tr><td>LOW (static)</td><td></td></tr>
+  </table>
+  <p class="q">What does this prove about the difference between a latch and an edge-triggered flip-flop?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+
+  <h4 class="subhead">5.3.3 Asynchronous Clear</h4>
+  <p>With the clock running and D held HIGH, pulsing CLR&#772; LOW caused Q to:</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">Did it wait for a clock edge?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Propagation Delay</h3>
+  <div class="figblock">
+    <p class="note">Paste your oscilloscope capture showing the clock edge and the Q transition with cursors placed.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: Clock-to-Q propagation delay measurement.</p>
+  </div>
+  <div class="field">Measured t<sub>PLH</sub> or t<sub>PHL</sub> (clock edge to 50% of Q): <span class="blank" style="max-width:160pt"></span> <span class="unit">ns</span></div>
+  <div class="field">Datasheet value for the 74LS74: <span class="blank" style="max-width:160pt"></span> <span class="unit">ns</span></div>
+  <p class="q">If they differ, suggest a reason.</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: JK Flip-Flop (74LS73)</h3>
+  <table>
+    <tr><th>J</th><th>K</th><th>Observed Q behavior</th><th>Expected behavior</th><th>Match?</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: Toggle Mode and Frequency Division</h3>
+  <div class="figblock">
+    <p class="note">Paste your capture showing the clock and Q together.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 2: Clock and Q of a toggle flip-flop.</p>
+  </div>
+  <table class="wide">
+    <tr><th>Signal</th><th>Measured frequency</th><th>Ratio to clock</th></tr>
+    <tr><td>Clock</td><td></td><td>1</td></tr>
+    <tr><td>Q of first flip-flop</td><td></td><td></td></tr>
+    <tr><td>Q of second flip-flop</td><td></td><td></td></tr>
+  </table>
+  <p class="q">A chain of toggle flip-flops is counting something. What?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: why the SR forbidden state is genuinely unpredictable rather than merely undefined on paper, why synchronous systems are built from edge-triggered flip-flops rather than latches, and what setup and hold time violations would do to your circuit.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Lab 6: Latches and Flip-Flops
 
-**[Download the Lab 6 Report Template (PDF)](EE210L-Lab6-Report-Template.pdf)**
+**[Download the Lab 6 Report (PDF)](EE210L-Lab6-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -225,5 +225,5 @@ your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your oscilloscope captures for §5.4 and §5.6.
