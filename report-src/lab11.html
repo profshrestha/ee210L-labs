@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 11 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 11: Counters and Memory on the FPGA</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Do not start Part 5.2 until the LED in Part 5.1 is blinking. Everything below depends on a working clock.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Verify the Clock</h3>
+  <div class="field">Divider width used: <span class="blank" style="max-width:140pt"></span> <span class="unit">bits</span></div>
+  <p>Time for ten blinks: <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span> s &nbsp; Period per blink: <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span> s</p>
+  <p>Clock frequency computed from your measurement: <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span> MHz &nbsp; Expected: 125 MHz</p>
+  <p>Show your divider calculation:</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Counter on Hardware</h3>
+  <p>Time for a full 0&rarr;15 cycle: <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span> s &nbsp; Predicted from your divider: <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span> s</p>
+  <p class="q">Does btn[0] reset the count? <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span></p>
+  <table>
+    <tr><th>Resource</th><th>Used</th><th>% Utilization</th></tr>
+    <tr><td>LUTs</td><td></td><td></td></tr>
+    <tr><td>Flip-flops</td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Ring Counter</h3>
+  <p>Describe what the LEDs do, and how it differs from the binary counter:</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+  <p class="q">Does this match the 74LS194 behavior from Lab 7? <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span></p>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Button Without Debouncing</h3>
+  <table>
+    <tr><th>Trial</th><th>Presses made</th><th>Count reached</th><th>Extra counts</th></tr>
+    <tr><td>1</td><td>10</td><td></td><td></td></tr>
+    <tr><td>2</td><td>10</td><td></td><td></td></tr>
+    <tr><td>3</td><td>10</td><td></td><td></td></tr>
+    <tr><td>4</td><td>10</td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Button With Debouncing</h3>
+  <table>
+    <tr><th>Trial</th><th>Presses made</th><th>Count reached</th><th>Extra counts</th></tr>
+    <tr><td>1</td><td>10</td><td></td><td></td></tr>
+    <tr><td>2</td><td>10</td><td></td><td></td></tr>
+    <tr><td>3</td><td>10</td><td></td><td></td></tr>
+    <tr><td>4</td><td>10</td><td></td><td></td></tr>
+  </table>
+  <p class="q">What did the debouncer fix, and roughly how many extra counts was bounce producing per press?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+  <p class="q">Why is the two-flip-flop synchronizer needed even though the debouncer already filters the input?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: ROM Addressed by the Counter</h3>
+  <p class="note">List the 16 values you stored.</p>
+  <table>
+    <tr><th>Addr</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+    <tr><td>Value</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>Addr</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th></tr>
+    <tr><td>Value</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Did the LEDs display your pattern rather than a binary count? <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span></p>
+  <table>
+    <tr><th>Resource</th><th>Used</th></tr>
+    <tr><td>LUTs</td><td></td></tr>
+    <tr><td>Block RAM (BRAM tiles)</td><td></td></tr>
+  </table>
+  <p class="q">Was the ROM built from LUTs or block RAM? <span class="blank" style="display:inline-block; width:120pt; border-bottom:1px solid #000;"></span></p>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.7: RAM Write and Read Back</h3>
+  <table>
+    <tr><th>Address</th><th>Value written</th><th>Value read back</th><th>Match?</th></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.8: Forcing Block RAM</h3>
+  <table>
+    <tr><th>Implementation</th><th>LUTs used</th><th>BRAM tiles used</th></tr>
+    <tr><td>Default (tool's choice)</td><td></td><td></td></tr>
+    <tr><td>ram_style = "block"</td><td></td><td></td></tr>
+  </table>
+  <p class="q">Which is the better fit for a 16&times;4 memory, and why did the tool choose what it did by default?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: why you divide a clock with an enable rather than by clocking logic from a divided signal, what simulation could not have shown you about the button, and when a design should use block RAM instead of distributed RAM.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>

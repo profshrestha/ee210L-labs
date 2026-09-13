@@ -1,6 +1,6 @@
 # Lab 11: Counters and Memory on the FPGA
 
-**[Download the Lab 11 Report Template (PDF)](EE210L-Lab11-Report-Template.pdf)**
+**[Download the Lab 11 Report (PDF)](EE210L-Lab11-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -261,5 +261,5 @@ Close the hardware target in Vivado before unplugging the board.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your source code, all measured counts, and every utilization figure.
