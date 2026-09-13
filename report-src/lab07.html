@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 7 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 7: Shift Registers and Counters</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">The 74LS73 uses V_CC on pin 4 / GND on pin 11, and the 74LS90 uses V_CC on pin 5 / GND on pin 10. Confirm both before applying power.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Ripple Counter</h3>
+  <table>
+    <tr><th>Signal</th><th>Measured frequency</th><th>Ratio to clock</th></tr>
+    <tr><td>Clock</td><td></td><td>1</td></tr>
+    <tr><td>1Q (stage 1)</td><td></td><td></td></tr>
+    <tr><td>2Q (stage 2)</td><td></td><td></td></tr>
+  </table>
+  <div class="figblock">
+    <p class="note">Paste the capture showing that 2Q changes after 1Q rather than with it.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: Ripple delay between counter stages.</p>
+  </div>
+  <div class="field">Measured delay from the 1Q edge to the 2Q edge: <span class="blank" style="max-width:160pt"></span> <span class="unit">ns</span></div>
+  <div class="field">Estimated worst-case delay for an 8-bit ripple counter built the same way: <span class="blank" style="max-width:120pt"></span> <span class="unit">ns</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Synchronous Counter (74LS163)</h3>
+  <table>
+    <tr><th>Count</th><th>QD</th><th>QC</th><th>QB</th><th>QA</th><th>Decimal</th><th>RCO</th></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>15</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p>RCO asserts at state <span class="blank" style="display:inline-block; width:120pt; border-bottom:1px solid #000;"></span>. Output frequencies at 10 kHz clock: QA = <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span>, QD = <span class="blank" style="display:inline-block; width:100pt; border-bottom:1px solid #000;"></span></p>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Mod-10 Counter</h3>
+  <p class="note">Outputs NANDed to detect state 9: <span class="blank" style="display:inline-block; width:60pt; border-bottom:1px solid #000;"></span> and <span class="blank" style="display:inline-block; width:60pt; border-bottom:1px solid #000;"></span></p>
+  <table>
+    <tr><th>Count</th><th>QD</th><th>QC</th><th>QB</th><th>QA</th><th>Decimal</th></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Why does state 10 never appear, even briefly? What would be different on a counter with an asynchronous clear?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Decade Counter (74LS90)</h3>
+  <table>
+    <tr><th>Count</th><th>QD</th><th>QC</th><th>QB</th><th>QA</th><th>Decimal</th></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p>Effect of taking R0(1) and R0(2) HIGH together:</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Universal Shift Register (74LS194)</h3>
+
+  <h4 class="subhead">5.5.1 Parallel Load and Hold</h4>
+  <table>
+    <tr><th>Mode (S1 S0)</th><th>After clock edge</th><th>QA</th><th>QB</th><th>QC</th><th>QD</th></tr>
+    <tr><td>1 1 (load 1011)</td><td>1st</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0 0 (hold)</td><td>after several</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.5.2 Shift Right (S1 S0 = 01, SR SER = 0)</h4>
+  <table>
+    <tr><th>Clock edge</th><th>QA</th><th>QB</th><th>QC</th><th>QD</th></tr>
+    <tr><td>start</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.5.3 Shift Left (S1 S0 = 10, SL SER = 0)</h4>
+  <table>
+    <tr><th>Clock edge</th><th>QA</th><th>QB</th><th>QC</th><th>QD</th></tr>
+    <tr><td>start</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: Ring Counter</h3>
+  <table>
+    <tr><th>Clock edge</th><th>QA</th><th>QB</th><th>QC</th><th>QD</th></tr>
+    <tr><td>start (loaded 1000)</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.7: Johnson Counter</h3>
+  <table>
+    <tr><th>Clock edge</th><th>QA</th><th>QB</th><th>QC</th><th>QD</th></tr>
+    <tr><td>start (cleared)</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.7.1 States per Flip-Flop</h4>
+  <table class="wide">
+    <tr><th>Counter type</th><th>States from 4 flip-flops</th><th>Decoding logic needed per state</th></tr>
+    <tr><td>Ring</td><td></td><td></td></tr>
+    <tr><td>Johnson</td><td></td><td></td></tr>
+    <tr><td>Binary</td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: what decoding glitches are and why a ripple counter produces them, why a synchronous clear matters for the mod-10 design, and the trade-off between ring, Johnson, and binary counters.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>

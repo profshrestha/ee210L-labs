@@ -1,6 +1,6 @@
 # Lab 7: Shift Registers and Counters
 
-**[Download the Lab 7 Report Template (PDF)](EE210L-Lab7-Report-Template.pdf)**
+**[Download the Lab 7 Report (PDF)](EE210L-Lab7-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -243,5 +243,5 @@ your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your oscilloscope captures for §5.1 and §5.2.
