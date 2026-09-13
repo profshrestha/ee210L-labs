@@ -1,6 +1,6 @@
 # Lab 8: Combinational Logic in Verilog
 
-**[Download the Lab 8 Report Template (PDF)](EE210L-Lab8-Report-Template.pdf)**
+**[Download the Lab 8 Report (PDF)](EE210L-Lab8-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -244,5 +244,5 @@ save you hours later.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your source code, waveform captures, and the latch warning text.

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 8 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 8: Combinational Logic in Verilog</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Paste your source code and waveform captures in the boxes provided. Simulation only; no hardware this week.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Majority Voter</h3>
+  <div class="figblock">
+    <div class="codebox"></div>
+    <p class="caption">Figure 1: majority.v source.</p>
+  </div>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 2: Simulation waveform, all eight cases.</p>
+  </div>
+  <p>Testbench console output:</p>
+  <div class="codebox" style="min-height:60pt"></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Break It on Purpose</h3>
+  <p class="note">With the a &amp; c term removed, the testbench printed:</p>
+  <div class="codebox" style="min-height:60pt"></div>
+  <p class="q">Which input case(s) failed?</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">How would you have found this on the waveform alone?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Two-Bit Comparator</h3>
+  <div class="figblock">
+    <div class="codebox"></div>
+    <p class="caption">Figure 3: compare2.v source.</p>
+  </div>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 4: Simulation waveform, all 16 cases.</p>
+  </div>
+  <div class="idrow">
+    <div class="idfield">All 16 cases passed? <span class="blank"></span></div>
+    <div class="idfield">Did you add the &ldquo;exactly one output high&rdquo; check? <span class="blank"></span></div>
+  </div>
+  <p class="q">What class of bug does that extra check catch that testing gt, eq, and lt separately would miss?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Inferred Latch</h3>
+  <p class="note">Copy the synthesis warning verbatim.</p>
+  <div class="codebox" style="min-height:60pt"></div>
+  <p class="q">After assigning a default, was the warning gone?</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">Explain why the original code required a latch.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Four-Bit Adder</h3>
+  <div class="figblock">
+    <div class="codebox"></div>
+    <p class="caption">Figure 5: adder4.v and testbench source.</p>
+  </div>
+  <table>
+    <tr><th>Cases verified</th><th>Result (pass / fail)</th><th>Approx. time to write</th></tr>
+    <tr><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Compare this with wiring and measuring the 74LS283 in Lab 5. How many input combinations did you check by hand there, versus here?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: what "Verilog describes hardware, it does not execute" means in practice, why a self-checking testbench beats reading waveforms, and how accidental latches happen.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>
