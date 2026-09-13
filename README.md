@@ -9,8 +9,18 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | # | Lab | Key Parts |
 |---|-----|-----------|
 | 1 | [Logic Gates and Truth Tables](labs/lab-01-logic-gates-and-truth-tables/README.md) | 74LS00, 74LS02, 74LS04, 74LS08, 74LS32, 74LS86 |
+| 2 | Boolean Simplification and K-Maps | Gate ICs from Lab 1 |
+| 3 | Multiplexers and Demultiplexers | 74LS151, 74LS138 |
+| 4 | Decoders and Encoders | 74LS138, 74LS148 |
+| 5 | Adders and Comparators | 74LS283, 74LS85 |
+| 6 | Latches and Flip-Flops | 74LS279, 74LS74, 74LS73 |
+| 7 | Shift Registers and Counters | 74LS194, 74LS163, 74LS90 |
+| 8 | Combinational Logic in Verilog | Simulation only |
+| 9 | Sequential Logic in Verilog | Simulation only |
+| 10 | First FPGA Design | PYNQ-Z2 |
+| 11 | Counters and Memory on the FPGA | PYNQ-Z2 |
 
-Labs 2-11 will be added here as the semester progresses.
+Labs unlock here as the semester progresses.
 
 ## Lab Equipment
 
@@ -43,5 +53,4 @@ Labs 8 and 9 are simulation only. Labs 10 and 11 use the **PYNQ-Z2** board (Xili
 ## Before Every Lab
 
 1. Read the lab instructions and work through any pre-lab calculations **before** you arrive.
-2. Download the lab report template from the lab folder.
-3. Bring your parts kit.
+2. Bring your parts kit.

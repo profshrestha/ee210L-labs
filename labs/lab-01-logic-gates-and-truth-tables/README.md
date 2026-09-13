@@ -1,6 +1,6 @@
 # Lab 1: Logic Gates and Truth Tables
 
-**[Download the Lab 1 Report Template (PDF)](EE210L-Lab1-Report-Template.pdf)**
+**[Download the Lab 1 Report (PDF)](EE210L-Lab1-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -211,7 +211,7 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas.
+Fill in the report linked at the top of this page and submit it on Canvas.
 
 Your report must include, for every gate in §5.2–§5.3, the measured output voltage and the
 logic level for every input combination, plus the results from §5.4, §5.5, and §5.6.

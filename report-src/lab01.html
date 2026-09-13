@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 1 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 1: Logic Gates and Truth Tables</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Fill in every measured value. Record the voltage you actually measured, not the value you expected. Show your work where a calculation is asked for.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Power Supply Setup</h3>
+  <div class="field">Measured power supply voltage: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: First Circuit — AND Gate (74LS08)</h3>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: OR, NOT, NAND, NOR, XOR</h3>
+  <p class="note">For each gate, set the inputs with jumper wires, measure the output with the DMM, and convert the measurement to a logic level (HIGH &ge; 2.0 V, LOW &le; 0.8 V).</p>
+
+  <h4 class="subhead">OR (74LS32)</h4>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">NOT (74LS04)</h4>
+  <table>
+    <tr><th>A</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">NAND (74LS00)</h4>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">NOR (74LS02)</h4>
+  <p class="note">Remember that the 74LS02 output is pin 1 and its inputs are pins 2 and 3.</p>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">XOR (74LS86)</h4>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <p class="q">Did every gate match the truth table you predicted in your pre-lab? If any did not, explain what was wrong and how you fixed it.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Undefined Region</h3>
+  <p>With one input of the 74LS08 tied HIGH and the other left disconnected:</p>
+  <div class="field">Voltage measured at the floating input pin: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Voltage measured at the output: <span class="blank"></span> <span class="unit">V</span></div>
+  <p class="q">Which band of &sect;3.1 does the floating input fall into (valid HIGH, valid LOW, or undefined)? Why should you never leave an input floating in a real design?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Propagation of a Real Signal</h3>
+  <table>
+    <tr><th>Input at pin 1</th><th>V at pin 1 (V)</th><th>V at pin 2 (V)</th><th>V at pin 4 (V)</th></tr>
+    <tr><td>Logic 0</td><td></td><td></td><td></td></tr>
+    <tr><td>Logic 1</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Explain what the second inverter does to the signal level coming out of the first one.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: NAND as a Universal Gate</h3>
+
+  <h4 class="subhead">5.6.1 NOT from NAND</h4>
+  <div class="figblock">
+    <p class="note">Draw your circuit diagram in the box. Label every pin number you used.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: NOT gate built from a single NAND gate.</p>
+  </div>
+  <table>
+    <tr><th>A</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th></tr>
+    <tr><td>0</td><td></td><td></td></tr>
+    <tr><td>1</td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.6.2 AND from NAND</h4>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 2: AND gate built from NAND gates only.</p>
+  </div>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.6.3 OR from NAND</h4>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 3: OR gate built from NAND gates only.</p>
+  </div>
+  <table>
+    <tr><th>A</th><th>B</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+
+  <p class="q">How many NAND gates did each circuit take? Why does being able to build NOT, AND, and OR out of one gate type matter to someone manufacturing a chip?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Summarize what you measured and what it confirmed. Address at least: how your measured output voltages compared to an ideal 0 V / 5 V, any wiring mistakes you made and how you found them, and what you would check first if a gate gave you the wrong output.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>
