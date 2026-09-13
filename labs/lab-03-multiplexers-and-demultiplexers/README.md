@@ -1,6 +1,6 @@
 # Lab 3: Multiplexers and Demultiplexers
 
-**[Download the Lab 3 Report Template (PDF)](EE210L-Lab3-Report-Template.pdf)**
+**[Download the Lab 3 Report (PDF)](EE210L-Lab3-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -158,4 +158,4 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas.
+Fill in the report linked at the top of this page and submit it on Canvas.
