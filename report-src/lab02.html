@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 2: Boolean Simplification and K-Maps</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Show every step of your minimization, not just the final answer. Draw your groupings directly on the K-maps.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 4.1: Majority Voter</h3>
+
+  <h4 class="subhead">Truth Table</h4>
+  <table>
+    <tr><th>A</th><th>B</th><th>C</th><th>M</th><th>Minterm (if M = 1)</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">Unminimized SOP Expression</h4>
+  <div class="field">M = <span class="blank"></span></div>
+
+  <h4 class="subhead">K-Map</h4>
+  <p class="note">Fill in each cell and circle your groups.</p>
+  <table>
+    <tr><th></th><th>BC = 00</th><th>BC = 01</th><th>BC = 11</th><th>BC = 10</th></tr>
+    <tr><th>A = 0</th><td></td><td></td><td></td><td></td></tr>
+    <tr><th>A = 1</th><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">Minimized Expression</h4>
+  <div class="field">M = <span class="blank"></span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 4.2: Four-Variable Function</h3>
+  <p>F(A,B,C,D) = &Sigma;m(0, 1, 2, 3, 5, 7, 8, 9, 10, 11)</p>
+
+  <h4 class="subhead">K-Map</h4>
+  <p class="note">Fill in each cell and circle your groups. One group covers eight cells.</p>
+  <table>
+    <tr><th></th><th>CD = 00</th><th>CD = 01</th><th>CD = 11</th><th>CD = 10</th></tr>
+    <tr><th>AB = 00</th><td></td><td></td><td></td><td></td></tr>
+    <tr><th>AB = 01</th><td></td><td></td><td></td><td></td></tr>
+    <tr><th>AB = 11</th><td></td><td></td><td></td><td></td></tr>
+    <tr><th>AB = 10</th><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">Minimized Expression</h4>
+  <div class="field">F = <span class="blank"></span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Simulation</h3>
+  <p class="note">Paste a screenshot of each simulated schematic in the boxes below.</p>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 1: Simulated majority voter (minimized).</p>
+  </div>
+  <div class="figblock">
+    <div class="box"></div>
+    <p class="caption">Figure 2: Simulated four-variable function (minimized).</p>
+  </div>
+  <p class="q">Did both simulations match your pre-lab truth tables on the first try? If not, what was wrong?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Measured Majority Voter</h3>
+  <table>
+    <tr><th>A</th><th>B</th><th>C</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected M</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Measured Four-Variable Function</h3>
+  <table>
+    <tr><th>A</th><th>B</th><th>C</th><th>D</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected F</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Cost Comparison</h3>
+  <p class="note">Count 2-input gates. A 3-input AND built from 2-input gates counts as two gates. Count inverters separately.</p>
+  <table class="wide">
+    <tr><th>Function</th><th>Version</th><th>Gates</th><th>Inverters</th><th>IC packages</th></tr>
+    <tr><td>Majority voter</td><td>Unminimized SOP</td><td></td><td></td><td></td></tr>
+    <tr><td>Majority voter</td><td>Minimized</td><td></td><td></td><td></td></tr>
+    <tr><td>F(A,B,C,D)</td><td>Unminimized SOP</td><td></td><td></td><td></td></tr>
+    <tr><td>F(A,B,C,D)</td><td>Minimized</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: how much hardware minimization saved you, which K-map grouping was hardest to spot and why, and whether simulating first saved you time at the bench.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>

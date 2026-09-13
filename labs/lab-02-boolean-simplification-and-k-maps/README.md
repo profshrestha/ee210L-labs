@@ -1,6 +1,6 @@
 # Lab 2: Boolean Simplification and K-Maps
 
-**[Download the Lab 2 Report Template (PDF)](EE210L-Lab2-Report-Template.pdf)**
+**[Download the Lab 2 Report (PDF)](EE210L-Lab2-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -145,7 +145,7 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas.
+Fill in the report linked at the top of this page and submit it on Canvas.
 
 Include your K-maps with the groupings clearly drawn, both simulator screenshots, all
 measured data, and the cost comparison.
