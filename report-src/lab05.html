@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 5 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 5: Adders and Comparators</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Half Adder</h3>
+  <table>
+    <tr><th>A</th><th>B</th><th>V at S (V)</th><th>S</th><th>V at C (V)</th><th>C</th><th>Expected S</th><th>Expected C</th></tr>
+    <tr><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Full Adder</h3>
+  <div class="figblock">
+    <p class="note">Draw the full adder circuit you built. Label every gate and pin.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: Full adder built from gates.</p>
+  </div>
+  <table>
+    <tr><th>A</th><th>B</th><th>C<sub>in</sub></th><th>V at S (V)</th><th>S</th><th>V at C<sub>out</sub> (V)</th><th>C<sub>out</sub></th><th>Expected S</th><th>Expected C<sub>out</sub></th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Four-Bit Addition (74LS283)</h3>
+  <table class="wide">
+    <tr><th>A (dec)</th><th>A (bin)</th><th>B (dec)</th><th>B (bin)</th><th>&Sigma;4 &Sigma;3 &Sigma;2 &Sigma;1</th><th>C4</th><th>Sum as decimal</th><th>4-bit result correct?</th></tr>
+    <tr><td>9</td><td>1001</td><td>6</td><td>0110</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td>1001</td><td>11</td><td>1011</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">How does C4 tell you that a 4-bit sum has overflowed?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Adder/Subtractor</h3>
+  <div class="figblock">
+    <p class="note">Draw how the XOR gates and the control line connect to the 74LS283.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 2: Adder/subtractor built around the 74LS283.</p>
+  </div>
+  <table class="wide">
+    <tr><th>Control</th><th>Operation</th><th>A</th><th>B</th><th>&Sigma;4 &Sigma;3 &Sigma;2 &Sigma;1</th><th>C4</th><th>Result as decimal</th><th>Expected</th></tr>
+    <tr><td>0</td><td>A + B</td><td>7</td><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>A &minus; B</td><td>7</td><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>A &minus; B</td><td>12</td><td>5</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>A &minus; B</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">What does C4 mean when the circuit is subtracting?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Magnitude Comparator (74LS85)</h3>
+  <div class="field">Cascade inputs for standalone operation: pin 4 = <span class="blank" style="max-width:80pt"></span>, pin 2 = <span class="blank" style="max-width:80pt"></span>, pin 3 = <span class="blank" style="max-width:80pt"></span></div>
+  <table>
+    <tr><th>A (bin)</th><th>B (bin)</th><th>A&gt;B out</th><th>A=B out</th><th>A&lt;B out</th><th>Correct relation?</th></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h4 class="subhead">5.5.1 Cascade Inputs Set Incorrectly</h4>
+  <p>With pin 3 tied to GND and A = B, the outputs read:</p>
+  <div class="idrow">
+    <div class="idfield">A&gt;B = <span class="blank"></span></div>
+    <div class="idfield">A=B = <span class="blank"></span></div>
+    <div class="idfield">A&lt;B = <span class="blank"></span></div>
+  </div>
+  <p class="q">Explain why the comparator behaves this way, and what the cascade inputs are actually for.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: why a half adder cannot be used for any bit but the least significant, what ripple carry costs you as the adder gets wider, and how one chip manages to both add and subtract.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>

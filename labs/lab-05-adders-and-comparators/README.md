@@ -1,6 +1,6 @@
 # Lab 5: Adders and Comparators
 
-**[Download the Lab 5 Report Template (PDF)](EE210L-Lab5-Report-Template.pdf)**
+**[Download the Lab 5 Report (PDF)](EE210L-Lab5-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -198,4 +198,4 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas.
+Fill in the report linked at the top of this page and submit it on Canvas.
