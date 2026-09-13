@@ -1,6 +1,6 @@
 # Lab 10: First FPGA Design
 
-**[Download the Lab 10 Report Template (PDF)](EE210L-Lab10-Report-Template.pdf)**
+**[Download the Lab 10 Report (PDF)](EE210L-Lab10-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -192,5 +192,5 @@ Close the hardware target in Vivado before unplugging the board.
 
 ## 6. Report
 
-Fill in the report template linked at the top of this page and submit it on Canvas. Include
+Fill in the report linked at the top of this page and submit it on Canvas. Include
 your top module, your XDC file, the utilization numbers, and the error text from §5.6.

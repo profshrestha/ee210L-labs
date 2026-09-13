@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 10 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 10: First FPGA Design</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Board: PYNQ-Z2, part xc7z020clg400-1. FPGA I/O runs at 3.3 V. Never connect a 5 V signal to a board pin.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Majority Voter on Hardware</h3>
+  <div class="figblock">
+    <div class="codebox"></div>
+    <p class="caption">Figure 1: Top-level module source.</p>
+  </div>
+  <div class="figblock">
+    <div class="codebox"></div>
+    <p class="caption">Figure 2: Your XDC constraints file.</p>
+  </div>
+  <table>
+    <tr><th>sw[0]</th><th>sw[1]</th><th>btn[0]</th><th>LD0 observed</th><th>Expected M</th><th>Match?</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Resource Utilization</h3>
+  <table>
+    <tr><th>Resource</th><th>Used</th><th>Available</th><th>% Utilization</th></tr>
+    <tr><td>LUTs</td><td></td><td>53,200</td><td></td></tr>
+    <tr><td>Flip-flops</td><td></td><td>106,400</td><td></td></tr>
+    <tr><td>Bonded IOBs</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">The majority voter took three gates on the breadboard. How many LUTs here, and why is a LUT able to absorb the whole function?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+  <p class="q">Why does K-map minimization save nothing inside a single LUT?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Two-Bit Comparator on Hardware</h3>
+  <table>
+    <tr><th>a[1:0]</th><th>b[1:0]</th><th>LD0 (gt)</th><th>LD1 (eq)</th><th>LD2 (lt)</th><th>Exactly one lit?</th></tr>
+    <tr><td>00</td><td>00</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>00</td><td>01</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>00</td><td>10</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>00</td><td>11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>01</td><td>00</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>01</td><td>01</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>01</td><td>10</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>01</td><td>11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td>00</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td>01</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td>10</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td>11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td>00</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td>01</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td>10</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td>11</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Break a Constraint on Purpose</h3>
+  <div class="field">Pin changed: <span class="blank" style="max-width:100pt"></span> moved from <span class="blank" style="max-width:80pt"></span> to <span class="blank" style="max-width:80pt"></span></div>
+  <p class="q">What did the board do?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+  <p class="q">The Verilog never changed. What does that tell you about the role of the XDC file?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: An Unconstrained Port</h3>
+  <p class="note">Copy the error or critical warning verbatim.</p>
+  <div class="codebox" style="min-height:60pt"></div>
+  <p class="q">At which stage did it appear: synthesis or implementation?</p>
+  <div class="lines"><div class="line"></div></div>
+  <p class="q">Why does an unconstrained port fail there rather than at synthesis?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Address at least: what a bitstream actually is, how the FPGA flow compares with wiring a breadboard, and which stage of the flow you would check first for a language error versus a pin error.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+</body>
+</html>
