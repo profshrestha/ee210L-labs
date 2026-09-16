@@ -244,5 +244,5 @@ save you hours later.
 
 ## 6. Report
 
-Fill in the report linked at the top of this page and submit it on Canvas. Include
+Fill in the report and hand it in at the end of the lab. Include
 your source code, waveform captures, and the latch warning text.

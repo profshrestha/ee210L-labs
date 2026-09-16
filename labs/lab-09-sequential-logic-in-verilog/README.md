@@ -238,5 +238,5 @@ The waveform shows you the symptom. The schematic shows you the cause.
 
 ## 6. Report
 
-Fill in the report linked at the top of this page and submit it on Canvas. Include
+Fill in the report and hand it in at the end of the lab. Include
 your source code, all waveform captures, and the flip-flop counts from §5.3.

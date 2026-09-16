@@ -243,5 +243,5 @@ your kit.
 
 ## 6. Report
 
-Fill in the report linked at the top of this page and submit it on Canvas. Include
+Fill in the report and hand it in at the end of the lab. Include
 your oscilloscope captures for §5.1 and §5.2.

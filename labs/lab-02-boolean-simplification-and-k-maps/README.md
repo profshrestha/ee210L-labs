@@ -145,7 +145,7 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report linked at the top of this page and submit it on Canvas.
+Fill in the report and hand it in at the end of the lab.
 
 Include your K-maps with the groupings clearly drawn, both simulator screenshots, all
 measured data, and the cost comparison.
