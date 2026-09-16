@@ -211,7 +211,7 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 ## 6. Report
 
-Fill in the report linked at the top of this page and submit it on Canvas.
+Fill in the report and hand it in at the end of the lab.
 
 Your report must include, for every gate in §5.2–§5.3, the measured output voltage and the
 logic level for every input combination, plus the results from §5.4, §5.5, and §5.6.
