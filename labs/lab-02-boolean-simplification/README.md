@@ -118,7 +118,7 @@ connected or the chip will not work.
 **Bring your ICs, breadboard, DMM, and parts kit to lab.**
 
 Complete the pre-lab before you arrive. There is nothing to submit: show me your work at the
-start of lab. It must be **hand-written and hand-drawn** in a physical notebook or notepad.
+start of lab. It must be **hand-written and hand-drawn** in a physical notebook.
 
 These are the two circuits you will analyze and build.
 
