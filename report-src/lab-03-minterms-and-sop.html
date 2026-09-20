@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 3 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 3: Minterms and SOP Implementation</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Record logic levels only, 0 or 1. Write a variable plain where its row has a 1 and complemented where it has a 0.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Power Supply Setup</h3>
+  <div class="field">Measured power supply voltage: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Function G &mdash; Built Straight from the Minterms</h3>
+  <div class="field">Canonical SOP &nbsp; G = <span class="blank"></span></div>
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>Predicted G</th><th>Measured G</th><th>74LS86 output</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="field">Which single gate did you build out of five? <span class="blank"></span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Function M &mdash; The Majority Voter</h3>
+  <div class="field">Minterm list &nbsp; M = &Sigma;m( <span class="blank" style="max-width:200pt"></span> )</div>
+  <div class="field">Simplified expression &nbsp; M = <span class="blank"></span></div>
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>Predicted M</th><th>Measured M</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>5</td><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>6</td><td>1</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>7</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>8</td><td>1</td><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+  <p class="q">Does the measured column match the specification &mdash; output 1 exactly when two or three inputs are 1?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Function F &mdash; A Variable That Disappears</h3>
+  <div class="field">Simplified expression &nbsp; F = <span class="blank"></span></div>
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>Predicted F</th><th>Measured F</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>5</td><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>6</td><td>1</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>7</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>8</td><td>1</td><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+  <p class="q">What does toggling C do to the output? Explain how six minterms that all contain C produced a function that does not depend on C.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Cost of the Canonical Form</h3>
+  <p class="note">Count 2-input gates. An n-input gate costs n &minus; 1 of them. Count inverters separately.</p>
+  <table class="wide">
+    <tr><th>Function</th><th>Version</th><th>AND</th><th>OR</th><th>NOT</th><th>Total gates</th><th>Packages</th></tr>
+    <tr><td>M (majority)</td><td>Canonical</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>M (majority)</td><td>Simplified</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>F</td><td>Canonical</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>F</td><td>Simplified</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="field">Gates the canonical F would have needed: <span class="blank" style="max-width:120pt"></span> &nbsp; in <span class="blank" style="max-width:120pt"></span> packages</div>
+</div>
+
+<div class="part keep">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Summarize what you built and what it confirmed. Address at least: why the canonical SOP works on any function without requiring you to be clever, what it costs you to skip the simplification step, and whether the circuit you built for G would have been obvious to you from the truth table alone.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="footnote">For SSU EE 210L student use only. Please do not distribute. Dr. Shrestha, Sonoma State University.</div>
+
+</body>
+</html>
