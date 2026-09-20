@@ -122,7 +122,7 @@ lead on the output pin. Convert the reading to a logic level using the table in 
 **Bring your logic ICs, breadboard, DMM, and parts kit to lab.**
 
 Complete the pre-lab before you arrive. There is nothing to submit: show me your work at the
-start of lab. It must be **hand-written and hand-drawn** in a physical notebook or notepad.
+start of lab. It must be **hand-written and hand-drawn** in a physical notebook.
 
 1. Write out the truth tables for 2-input AND, OR, NAND, NOR, and XOR, and for NOT.
 2. Using only NAND gates, sketch a circuit for NOT, one for AND, and one for OR. You will
