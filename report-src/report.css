@@ -45,6 +45,9 @@ p + .lines, p + .idrow { break-before: avoid; }
 
 .figblock { break-inside: avoid; margin-bottom: 10pt; }
 
+/* opt-in: keep a short section whole, e.g. a heading with its answer lines */
+.part.keep { break-inside: avoid; }
+
 .codebox { border: 1px solid #000; min-height: 130pt; font-family: "Courier New", monospace; font-size: 9.5pt; padding: 6pt; white-space: pre-wrap; }
 
 .footnote {
