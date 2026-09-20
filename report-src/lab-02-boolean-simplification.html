@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 2: Boolean Simplification</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Record logic levels only, 0 or 1. Enter your pre-lab predictions before you measure, and leave them as written even if a measurement disagrees.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Power Supply Setup</h3>
+  <div class="field">Measured power supply voltage: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Circuit (a) &mdash; Original</h3>
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>Predicted F</th><th>Measured F</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>5</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+  </table>
+  <div class="field">Did every row match your prediction? If not, what was wrong? <span class="blank"></span></div>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Circuit (a) &mdash; Simplified</h3>
+  <div class="field">Simplified expression &nbsp; F = <span class="blank"></span></div>
+
+  <div class="figblock">
+    <p class="note">Draw your simplified circuit in the box. Label every chip and pin number you used.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 1: Simplified form of circuit (a).</p>
+  </div>
+
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>Measured F</th><th>Same as 5.2?</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>5</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Circuit (b) &mdash; Original</h3>
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>Predicted Y</th><th>Measured Y</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>3</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>4</td><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+  <div class="field">Did every row match your prediction? If not, what was wrong? <span class="blank"></span></div>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Circuit (b) &mdash; Simplified</h3>
+  <div class="field">Simplified expression &nbsp; Y = <span class="blank"></span></div>
+
+  <div class="figblock">
+    <p class="note">Draw your simplified circuit in the box. Label every chip and pin number you used.</p>
+    <div class="box"></div>
+    <p class="caption">Figure 2: Simplified form of circuit (b).</p>
+  </div>
+
+  <table>
+    <tr><th>#</th><th>A</th><th>B</th><th>Measured Y</th><th>Same as 5.4?</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>3</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>4</td><td>1</td><td>1</td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.6: Gate and Chip Count</h3>
+  <table class="wide">
+    <tr><th>Circuit</th><th>AND gates</th><th>OR gates</th><th>NOT gates</th><th>Total gates</th><th>Packages</th></tr>
+    <tr><td>(a) original</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>(a) simplified</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>(b) original</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>(b) simplified</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">How many gates does the simplified circuit (b) need, against the seven in the original? What does that tell you about reading a schematic at face value?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Summarize what you measured and what it confirmed. Address at least: whether the simplified circuits reproduced the originals on every row you tested, which law did the most work in each simplification, and why testing five of the thirty-two possible input combinations of circuit (a) is not the same as proving the two circuits are equal.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="footnote">For SSU EE 210L student use only. Please do not distribute. Dr. Shrestha, Sonoma State University.</div>
+
+</body>
+</html>
