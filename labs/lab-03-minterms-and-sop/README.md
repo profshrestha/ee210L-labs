@@ -122,8 +122,9 @@ On every 14-pin chip here, **pin 7 is GND and pin 14 is V_CC**, and both must be
 
 **Bring your ICs, breadboard, DMM, and parts kit to lab.**
 
-Complete the pre-lab before you arrive. There is nothing to submit: show me your work at the
-start of lab. It must be **hand-written and hand-drawn** in a physical notebook.
+Complete the pre-lab before you arrive. It must be **hand-written and hand-drawn**. Scan or
+photograph your work and **submit it on Canvas before lab begins.** Bring the original with you
+to work from during lab.
 
 You will work with three functions.
 
