@@ -1,5 +1,5 @@
-/* the wider bottom margin reserves a band for the fixed footnote — a fixed
-   element is out of flow, so without it content runs underneath the footnote */
+/* the wider bottom margin reserves a band for the fixed footnote, which is out
+   of flow and would otherwise have page content run underneath it */
 @page { size: letter; margin: 0.75in 0.75in 1.15in; }
 * { box-sizing: border-box; }
 body {

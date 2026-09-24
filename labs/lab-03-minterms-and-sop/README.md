@@ -128,13 +128,13 @@ to work from during lab.
 
 You will work with three functions.
 
-**Function G** — two variables: `G(A,B) = Σm(1, 2)`
+**Function G**, two variables: `G(A,B) = Σm(1, 2)`
 
-**Function M** — the majority voter. `M(A,B,C)` is 1 when **two or more** of its three inputs
+**Function M**, the majority voter. `M(A,B,C)` is 1 when **two or more** of its three inputs
 are 1, and 0 otherwise. This is how redundant systems vote: three sensors report, and the
 majority wins.
 
-**Function F** — three variables: `F(A,B,C) = Σm(0, 1, 2, 3, 4, 5)`
+**Function F**, three variables: `F(A,B,C) = Σm(0, 1, 2, 3, 4, 5)`
 
 1. For **G**, write the full truth table and the canonical SOP expression. Draw the circuit,
    built from minterms exactly as written, and label every chip and pin number.
