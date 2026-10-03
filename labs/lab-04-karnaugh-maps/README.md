@@ -174,7 +174,7 @@ each method took.
 
 You already have its minimum sum-of-products answer. Carry it over and continue:
 
-- Write the minimum SOP from your homework solution. One line. No rework.
+- Write the minimum SOP from your homework solution.
 - Redraw the map with **every don't-care forced to 0**, group it again, and write that minimal
   SOP. This part is not in the homework.
 - Count the 2-input gates for both versions, using the Lab 3 §3.4 rule that an `n`-input gate
