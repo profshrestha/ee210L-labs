@@ -175,11 +175,9 @@ each method took.
 You already have its minimum sum-of-products answer. Carry it over and continue:
 
 - Write the minimum SOP from your homework solution.
-- Redraw the map with **every don't-care forced to 0**, group it again, and write that minimal
-  SOP. This part is not in the homework.
-- Count the 2-input gates for both versions, using the Lab 3 §3.4 rule that an `n`-input gate
-  costs `n − 1` two-input gates. Count inverters separately.
-- Draw the logic diagram for the **don't-care version only**.
+- Count the 2-input gates it needs, using the Lab 3 §3.4 rule that an `n`-input gate costs
+  `n − 1` two-input gates. Count inverters separately.
+- Draw the logic diagram for it.
 
 **3. Function P.** This is **problem 5.34** from the homework, parts (a) and (c) only.
 
@@ -220,7 +218,7 @@ continue:
 
 1. Power off. Place the 74LS08 and 74LS32. Wire **pin 14 to +5 V and pin 7 to GND on each
    chip.**
-2. Build the **don't-care version** of `W` from your pre-lab.
+2. Build `W` from your pre-lab.
 3. Bring `a`, `b`, `c`, and `d` out to four jumper wires.
 4. Power on and record `W` for the twelve rows below. These are the seven 1s and the five 0s.
    The four don't-care rows are deliberately absent.
@@ -281,9 +279,9 @@ continue:
 
 Fill in the comparison table in the report from your pre-lab gate counts.
 
-You built only the minimized version of each function. Note in your report how many gates and
-how many packages the all-zeros version of `P` would have taken, and whether it would have fit
-in the chips you have.
+You built only the minimized version of `P`. Note in your report how many gates and how many
+packages the all-zeros version would have taken, and whether it would have fit in the chips you
+have.
 
 ### 5.6 Shut Down
 
