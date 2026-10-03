@@ -156,44 +156,52 @@ to work from during lab.
 
 Draw every map in Gray code order and circle every group you use.
 
+Two of the three functions below are problems you have already solved for the lecture
+homework. **Do not work them again.** Start from the answer you already have and do only the
+parts listed here.
+
+Logic diagrams in this pre-lab are **logic diagrams only**: gate symbols, inputs, and output. You
+do not need chip or pin numbers. You will assign those at the breadboard.
+
 **1. The majority voter, again.** In Lab 3 you simplified `M(A,B,C) = Σm(3,5,6,7)` with the
-laws. Now do it with a map. Draw the three-variable map, group it, and write the minimal SOP.
-Compare it with the expression you got in Lab 3 and state whether they agree. Note how many
-steps each method took.
+laws. Do it with a map instead. Draw the three-variable map, group it, and write the minimal SOP.
+Compare it with the expression you got in Lab 3 and state whether they agree. Note how many steps
+each method took.
 
-**2. Function W, four variables with don't-cares.**
+**2. Function W.** This is **problem 5.7(d)** from the homework, part (d) only.
 
-```
-W(a,b,c,d) = Σm(3, 5, 7, 10, 11, 13, 14) + Σd(1, 9, 12, 15)
-```
+![Homework problem 5.7](figs/hw-5-7.png)
 
-- Draw the four-variable map and mark the 1s, the 0s, and the `X`s.
-- Group it, using the don't-cares wherever they make a group larger, and write the minimal SOP.
-- Now redraw the map with every `X` replaced by 0, group it again, and write that minimal SOP.
+You already have its minimum sum-of-products answer. Carry it over and continue:
+
+- Write the minimum SOP from your homework solution. One line. No rework.
+- Redraw the map with **every don't-care forced to 0**, group it again, and write that minimal
+  SOP. This part is not in the homework.
 - Count the 2-input gates for both versions, using the Lab 3 §3.4 rule that an `n`-input gate
   costs `n − 1` two-input gates. Count inverters separately.
-- Draw the circuit for the **don't-care version only**, with chips and pin numbers labelled.
+- Draw the logic diagram for the **don't-care version only**.
 
-**3. Function P, a prime number detector.** A digit from 0 to 7 is presented on inputs `a`, `b`,
-`c`, with `a` the most significant bit. A fourth input `d` is an **odd parity bit**: its value is
-whatever makes the total number of 1s among `a`, `b`, `c`, `d` odd. The output `P` is 1 when the
-digit is a prime number. Treat 1 as prime and 0 as not prime, so the primes are 1, 2, 3, 5, 7.
+**3. Function P.** This is **problem 5.34** from the homework, parts (a) and (c) only.
 
-- Build the table of all eight digits. For each one, write `abc`, work out the parity bit `d`,
-  and give the resulting minterm number of `abcd` and the value of `P`.
-- Eight of the sixteen input codes cannot occur. Say in one sentence why not, and list them.
-- Draw the four-variable map with 1s, 0s, and `X`s in the eight impossible cells.
-- Write a minimal SOP for `P`, then find **two more** minimal expressions that are equally
-  small. There are three in total.
-- Count the 2-input gates for your minimal `P`. Then, treating every `X` as 0, group the map
-  again and count the gates that version would need. Do not draw that circuit.
-- Draw the circuit for the **minimal version only**, with chips and pin numbers labelled.
+![Homework problem 5.34](figs/hw-5-34.png)
+
+You already have the map and every minimum sum-of-products expression. Carry them over and
+continue:
+
+- Write the eight digits with their `abcd` codes and minterm numbers, taken from the map you
+  already drew. Then list the eight codes that cannot occur and say in one sentence why not.
+- Write all the minimum SOP expressions from your homework solution, and mark the one you intend
+  to build.
+- Count the 2-input gates for the one you marked.
+- Group the map again with **every don't-care forced to 0** and count the gates that version
+  would need. Do not draw it.
+- Draw the logic diagram for the **version you will build only**.
 
 **4.** Predict the output for every row of the tables in §5.2, §5.3, and §5.4.
 
 > In Function P, all five 1s are isolated once the don't-cares are forced to 0. If you find a
-> group of two in that version, you have mis-assigned a parity bit. Check the table before you
-> count.
+> group of two in that version, you have mis-assigned a parity bit. Check your digit table before
+> you count.
 
 ## 5. Lab Work
 
@@ -241,7 +249,7 @@ digit is a prime number. Treat 1 as prime and 0 as not prime, so the primes are 
 ### 5.3 Function P: The Prime Detector
 
 1. Power off. Take down circuit `W`. Place the 74LS04 as well, and power it.
-2. Build your minimal `P` from the pre-lab.
+2. Build the version of `P` you marked in the pre-lab.
 3. Power on and record `P` for the eight codes that can actually occur, which are the eight rows
    of your pre-lab table.
 
@@ -285,6 +293,6 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 Fill in the report and hand it in at the end of the lab.
 
-Your report must include your maps with the groups circled, the minimal expressions for `M`,
-`W`, and `P`, all three minimal forms of `P`, the measured outputs from §5.2 through §5.4, and
-the gate counts from §5.5.
+Your report must include the minimal expressions for `M`, `W`, and `P`, every minimal form of
+`P`, the measured outputs from §5.2 through §5.4, and the gate counts from §5.5. Your maps and
+logic diagrams stay on the pre-lab you submitted on Canvas. Do not redraw them here.

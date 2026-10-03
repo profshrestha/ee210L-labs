@@ -31,6 +31,8 @@ table { border-collapse: collapse; width: 100%; margin-bottom: 4pt; break-inside
 table th, table td { border: 1px solid #000; padding: 4pt 6pt; text-align: center; }
 table th { background: #dbe5f1; font-weight: bold; }
 table.wide td:first-child, table.wide th:first-child { text-align: left; }
+/* opt-in: shorter rows, for a long data table that needs to fit a page */
+table.tight th, table.tight td { padding: 2pt 6pt; }
 
 .field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; break-inside: avoid; }
 .field .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; max-width: 320pt; }
