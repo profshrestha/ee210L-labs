@@ -11,7 +11,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 1 | [Logic Gates and Truth Tables](labs/lab-01-logic-gates-and-truth-tables/README.md) | 74LS00, 74LS02, 74LS04, 74LS08, 74LS32, 74LS86 |
 | 2 | [Boolean Simplification](labs/lab-02-boolean-simplification/README.md) | Gate ICs from Lab 1 |
 | 3 | [Minterms and SOP Implementation](labs/lab-03-minterms-and-sop/README.md) | Gate ICs from Lab 1 |
-| 4 | Karnaugh Maps | Gate ICs from Lab 1 |
+| 4 | [Karnaugh Maps](labs/lab-04-karnaugh-maps/README.md) | Gate ICs from Lab 1 |
 | 5 | NAND and NOR as Universal Gates | 74LS00, 74LS02 |
 | 6 | Adders and Comparators | 74LS283, 74LS85 |
 | 7 | Multiplexers and Demultiplexers | 74LS151, 74LS138 |

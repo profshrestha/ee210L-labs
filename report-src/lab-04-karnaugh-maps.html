@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 4 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 4: Karnaugh Maps</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Record logic levels only, 0 or 1. The map labels are already in Gray code order, 00 &middot; 01 &middot; 11 &middot; 10. Mark every cell, then circle every group you use.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 4: Maps from the Pre-Lab</h3>
+
+  <h4 class="subhead">4.1 Majority voter M(A,B,C)</h4>
+  <div class="kmap">
+    <table>
+      <tr><th class="corner">A\BC</th><th>00</th><th>01</th><th>11</th><th>10</th></tr>
+      <tr><td class="rowlab">0</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="rowlab">1</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div class="field">Minimal SOP from the map &nbsp; M = <span class="blank"></span></div>
+  <p class="q">Does it agree with the expression you derived with the laws in Lab 3? Which method took fewer steps?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+
+  <h4 class="subhead">4.2 Function W(a,b,c,d)</h4>
+  <div class="kmaprow">
+    <div class="kmap">
+      <table>
+        <tr><th class="corner">ab\cd</th><th>00</th><th>01</th><th>11</th><th>10</th></tr>
+        <tr><td class="rowlab">00</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">01</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">11</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">10</td><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="caption">Don&rsquo;t-cares marked X and used.</div>
+    </div>
+    <div class="kmap">
+      <table>
+        <tr><th class="corner">ab\cd</th><th>00</th><th>01</th><th>11</th><th>10</th></tr>
+        <tr><td class="rowlab">00</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">01</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">11</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="rowlab">10</td><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="caption">Every X forced to 0.</div>
+    </div>
+  </div>
+  <div class="field">Don&rsquo;t-cares used &nbsp; W = <span class="blank"></span></div>
+  <div class="field">Every X forced to 0 &nbsp; W = <span class="blank"></span></div>
+
+  <h4 class="subhead">4.3 Prime detector P(a,b,c,d)</h4>
+  <div class="kmap">
+    <table>
+      <tr><th class="corner">ab\cd</th><th>00</th><th>01</th><th>11</th><th>10</th></tr>
+      <tr><td class="rowlab">00</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="rowlab">01</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="rowlab">11</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="rowlab">10</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <div class="caption">Eight cells cannot occur. Mark them X.</div>
+  </div>
+  <div class="field">The eight codes that cannot occur: <span class="blank"></span></div>
+  <div class="field">All three minimal forms of P: <span class="blank"></span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Power Supply Setup</h3>
+  <div class="field">Measured power supply voltage: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.2: Function W, What the Don't-Cares Bought You</h3>
+  <div class="field">Expression built &nbsp; W = <span class="blank"></span></div>
+  <table>
+    <tr><th>#</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Predicted W</th><th>Measured W</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>6</td><td>0</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+    <tr><td>9</td><td>1</td><td>0</td><td>1</td><td>0</td><td></td><td></td></tr>
+    <tr><td>10</td><td>1</td><td>0</td><td>1</td><td>1</td><td></td><td></td></tr>
+    <tr><td>11</td><td>1</td><td>1</td><td>0</td><td>1</td><td></td><td></td></tr>
+    <tr><td>12</td><td>1</td><td>1</td><td>1</td><td>0</td><td></td><td></td></tr>
+  </table>
+  <p class="note">The four rows below cannot occur in the system this function came from. Record what the circuit does anyway.</p>
+  <table>
+    <tr><th>a</th><th>b</th><th>c</th><th>d</th><th>Measured W</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td><td>0</td><td></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td></td></tr>
+  </table>
+  <p class="q">Why were you free to ignore these four rows when you chose your groups?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Function P, the Prime Detector</h3>
+  <div class="field">Expression built &nbsp; P = <span class="blank"></span></div>
+  <table>
+    <tr><th>#</th><th>Digit</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Minterm</th><th>Predicted P</th><th>Measured P</th></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Does the measured column match the specification: 1 for digits 1, 2, 3, 5, 7 and 0 for digits 0, 4, 6?</p>
+  <div class="lines"><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Minimum Is Not Unique</h3>
+  <div class="field">Second form built &nbsp; P = <span class="blank"></span></div>
+  <table>
+    <tr><th>Digit</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+    <tr><td>P from &sect;5.3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>P from &sect;5.4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">The two circuits agree on all eight valid digits. Do they also agree on the eight codes that cannot occur? Explain the result.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.5: Cost Comparison</h3>
+  <p class="note">Count 2-input gates. An n-input gate costs n &minus; 1 of them. Count inverters separately.</p>
+  <table class="wide">
+    <tr><th>Function</th><th>Version</th><th>Terms</th><th>AND</th><th>OR</th><th>NOT</th><th>Total gates</th><th>Packages</th></tr>
+    <tr><td>W</td><td>Don't-cares used</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>W</td><td>X forced to 0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>P</td><td>Don't-cares used</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>P</td><td>X forced to 0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="field">Would the all-zeros version of P fit the chips you brought? <span class="blank"></span></div>
+</div>
+
+<div class="part keep">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Summarize what you built and what it confirmed. Address at least: what the map does that the laws of Lab 2 cannot do, why a don't-care costs nothing to use, and what it means for two different expressions to be equally minimal.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="footnote">For SSU EE 210L student use only. Please do not distribute. Dr. Shrestha, Sonoma State University.</div>
+
+</body>
+</html>
