@@ -168,28 +168,21 @@ do not need chip or pin numbers. You will assign those at the breadboard.
 
 `W` and `P` are the same two functions as Lab 4. Start from the expressions you already have.
 
-**1. The two gate sets.** Draw NOT, AND, and OR built from NAND gates only. Then draw NOT, OR, and
-AND built from NOR gates only. Six diagrams. Label the output of every gate with its expression.
-
-**2. Function W as all-NAND.** Carry over your minimum SOP for `W` from Lab 4.
+**1. Function W as all-NAND.** Carry over your minimum SOP for `W` from Lab 4.
 
 - Write the expression.
 - Apply the §3.4 conversion and write `W` as a nest of NAND operations.
 - Draw the logic diagram.
 - Count the NAND gates and the 74LS00 packages it needs.
 
-**3. Function P as all-NAND.** Carry over the form of `P` you built in Lab 4 §5.3.
+**2. Function P as all-NAND.** Carry over the form of `P` you built in Lab 4 §5.3.
 
 - Write the expression.
 - Apply the §3.4 conversion and write `P` as a nest of NAND operations.
 - Draw the logic diagram.
 - Count the NAND gates and the 74LS00 packages it needs.
 
-**4. Cost comparison.** Fill in a table with four rows: `W` as built in Lab 4, `W` as all-NAND,
-`P` as built in Lab 4, `P` as all-NAND. For each give the gate count, the package count, and the
-part numbers used. Take the Lab 4 figures from your Lab 4 pre-lab.
-
-**5.** Predict the output for every row of the tables in §5.2 through §5.5.
+**3.** Predict the output for every row of the tables in §5.2 through §5.5.
 
 > Your `P` needs one inverted literal. Two of Lab 4's three minimal forms need one inverter and
 > the third needs two, so the form you chose decides whether `P` fits in a single 74LS00. Count
@@ -210,8 +203,8 @@ part numbers used. Take the Lab 4 figures from your Lab 4 pre-lab.
 
 ### 5.2 NOT, AND, and OR from NAND Alone
 
-Place the 74LS00. Wire **pin 14 to +5 V and pin 7 to GND.** Build the three circuits from your
-pre-lab in turn, taking each one down before building the next.
+Place the 74LS00. Wire **pin 14 to +5 V and pin 7 to GND.** Build the three circuits from §3.2 in
+turn, taking each one down before building the next.
 
 1. **NOT.** One gate, both inputs tied to `a`. Record the output for `a` = 0 and `a` = 1.
 2. **AND.** Two gates. Record the output for all four combinations of `a` and `b`.
@@ -222,7 +215,7 @@ Each table must match the corresponding gate from Lab 1. That is the whole claim
 ### 5.3 NOT, OR, and AND from NOR Alone
 
 Power off. Take down the NAND circuit. Place the 74LS02 and power it, checking its pin numbers
-against §3.7.
+against §3.7. Build the three circuits from §3.3 in turn.
 
 1. **NOT.** One gate. Two rows.
 2. **OR.** Two gates. Four rows.
@@ -231,7 +224,7 @@ against §3.7.
 ### 5.4 Function W, Built from NAND Only
 
 1. Power off. Take down the NOR circuit. Place the 74LS00 and power it.
-2. Build `W` from your pre-lab §2 diagram.
+2. Build `W` from your pre-lab §1 diagram.
 3. Bring `a`, `b`, `c`, and `d` out to four jumper wires.
 4. Power on and record `W` for the twelve rows below, the same twelve as Lab 4 §5.2.
 
@@ -256,7 +249,7 @@ against §3.7.
 ### 5.5 Function P, Built from NAND Only
 
 1. Power off. Take down `W`.
-2. Build `P` from your pre-lab §3 diagram on the same 74LS00.
+2. Build `P` from your pre-lab §2 diagram on the same 74LS00.
 3. Power on and record `P` for the eight digits that can occur, the same eight as Lab 4 §5.3.
 
    | # | Digit | a | b | c | d |
@@ -278,8 +271,9 @@ against §3.7.
 
 ### 5.6 Cost Comparison
 
-Fill in the comparison table in the report from your pre-lab counts and note which version uses
-more gates and which uses more packages.
+Fill in the comparison table in the report. The all-NAND counts come from your pre-lab; the Lab 4
+figures come from your Lab 4 pre-lab. Note which version uses more gates and which uses more
+packages.
 
 ### 5.7 Shut Down
 
