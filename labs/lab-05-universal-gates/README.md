@@ -23,7 +23,7 @@ Your Lab 4 results for `W` and `P` are needed for comparison. Bring them.
 
 ## 3. Background
 
-### 3.1 One Gate Is Enough
+### 3.1 Universal Gates
 
 Labs 2 through 4 produced expressions in AND, OR, and NOT, and Lab 4 built them from three
 different chips: a 74LS08, a 74LS32, and a 74LS04. Three packages for three gates.
