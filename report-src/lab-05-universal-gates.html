@@ -38,46 +38,8 @@
   <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
 </div>
 
-<div class="part">
-  <h3 class="parthead">Part 5.2: NOT, AND, and OR from NAND Alone</h3>
-  <div class="field">Gates used: NOT <span class="blank"></span> &nbsp; AND <span class="blank"></span> &nbsp; OR <span class="blank"></span></div>
-  <table class="tight">
-    <tr><th>a</th><th>Predicted a&prime;</th><th>Measured a&prime;</th></tr>
-    <tr><td>0</td><td></td><td></td></tr>
-    <tr><td>1</td><td></td><td></td></tr>
-  </table>
-  <table class="tight">
-    <tr><th>a</th><th>b</th><th>Predicted a&middot;b</th><th>Measured a&middot;b</th><th>Predicted a+b</th><th>Measured a+b</th></tr>
-    <tr><td>0</td><td>0</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-  </table>
-  <p class="q">Do all three tables match the 74LS04, 74LS08, and 74LS32 results from Lab 1?</p>
-  <div class="lines"><div class="line"></div></div>
-</div>
-
-<div class="part">
-  <h3 class="parthead">Part 5.3: NOT, OR, and AND from NOR Alone</h3>
-  <div class="field">Gates used: NOT <span class="blank"></span> &nbsp; OR <span class="blank"></span> &nbsp; AND <span class="blank"></span></div>
-  <table class="tight">
-    <tr><th>a</th><th>Predicted a&prime;</th><th>Measured a&prime;</th></tr>
-    <tr><td>0</td><td></td><td></td></tr>
-    <tr><td>1</td><td></td><td></td></tr>
-  </table>
-  <table class="tight">
-    <tr><th>a</th><th>b</th><th>Predicted a+b</th><th>Measured a+b</th><th>Predicted a&middot;b</th><th>Measured a&middot;b</th></tr>
-    <tr><td>0</td><td>0</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-  </table>
-  <p class="q">NAND reached AND in two gates and OR in three. NOR did the opposite. Which form, sum-of-products or its dual, does each gate suit?</p>
-  <div class="lines"><div class="line"></div><div class="line"></div></div>
-</div>
-
 <div class="part newpage">
-  <h3 class="parthead">Part 5.4: Function W, Built from NAND Only</h3>
+  <h3 class="parthead">Part 5.2: Function W, Built from NAND Only</h3>
   <div class="field">NAND gates used <span class="blank"></span> &nbsp; 74LS00 packages <span class="blank"></span></div>
   <table class="wide">
     <tr><th>#</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Predicted W</th><th>Measured W, all-NAND</th><th>Measured W, Lab 4</th></tr>
@@ -99,7 +61,7 @@
 </div>
 
 <div class="part">
-  <h3 class="parthead">Part 5.5: Function P, Built from NAND Only</h3>
+  <h3 class="parthead">Part 5.3: Function P, Built from NAND Only</h3>
   <div class="field">NAND gates used <span class="blank"></span> &nbsp; of the four on the 74LS00 &nbsp;&nbsp; Chips the Lab 4 version needed <span class="blank"></span></div>
   <table class="wide">
     <tr><th>#</th><th>Digit</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Predicted P</th><th>Measured P, all-NAND</th><th>Measured P, Lab 4</th></tr>
@@ -115,7 +77,7 @@
 </div>
 
 <div class="part">
-  <h3 class="parthead">Part 5.6: Cost Comparison</h3>
+  <h3 class="parthead">Part 5.4: Cost Comparison</h3>
   <p class="note">Count 2-input gates. Count inverters as gates here, since a NAND inverter is one of the four on the package.</p>
   <table class="wide">
     <tr><th>Function</th><th>Version</th><th>Gates</th><th>Packages</th><th>Part numbers used</th></tr>

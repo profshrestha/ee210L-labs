@@ -6,7 +6,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 ## 1. Objectives
 
-- Build NOT, AND, and OR from NAND gates alone, and again from NOR gates alone.
+- Express NOT, AND, and OR using NAND gates alone, and again using NOR gates alone.
 - Convert a two-level sum-of-products circuit into an all-NAND circuit with the same structure.
 - Build the all-NAND versions of `W` and `P` and confirm they produce the Lab 4 results.
 - Compare gate count, package count, and chip variety between the two-chip-type and the
@@ -17,7 +17,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 - Breadboard and jumper wires
 - DC power supply
 - Digital multimeter (DMM)
-- ICs: 74LS00 (NAND), 74LS02 (NOR)
+- ICs: 74LS00 (NAND)
 
 Your Lab 4 results for `W` and `P` are needed for comparison. Bring them.
 
@@ -121,7 +121,7 @@ lead on ground, red lead on the output pin, and convert using the bands from Lab
 in the undefined band between 0.8 V and 2.0 V means something is wired wrong, most often a missing
 power or ground pin.
 
-### 3.7 Pinouts
+### 3.7 Pinout
 
 ```
                   74LS00 (Quad 2-input NAND)
@@ -136,24 +136,7 @@ power or ground pin.
                     └───────────────┘
 ```
 
-```
-                  74LS02 (Quad 2-input NOR)
-                    ┌───────∪───────┐
-             1Y  1 ─┤               ├─ 14  V_CC
-             1A  2 ─┤               ├─ 13  4Y
-             1B  3 ─┤               ├─ 12  4B
-             2Y  4 ─┤               ├─ 11  4A
-             2A  5 ─┤               ├─ 10  3Y
-             2B  6 ─┤               ├─  9  3B
-            GND  7 ─┤               ├─  8  3A
-                    └───────────────┘
-```
-
-**The 74LS02 is not wired like the others.** On the 74LS00, 74LS08, and 74LS32 each gate runs
-input, input, output. On the 74LS02 the **output comes first**: pin 1 is an output, pins 2 and 3
-are its inputs. Check the pin numbers against this diagram for every NOR gate you wire.
-
-On both chips, **pin 7 is GND and pin 14 is V_CC**, and both must be connected.
+**Pin 7 is GND and pin 14 is V_CC**, and both must be connected.
 
 ## 4. Pre-Lab
 
@@ -182,7 +165,7 @@ do not need chip or pin numbers. You will assign those at the breadboard.
 - Draw the logic diagram.
 - Count the NAND gates and the 74LS00 packages it needs.
 
-**3.** Predict the output for every row of the tables in §5.2 through §5.5.
+**3.** Predict the output for every row of the tables in §5.2 and §5.3.
 
 > Your `P` needs one inverted literal. Two of Lab 4's three minimal forms need one inverter and
 > the third needs two, so the form you chose decides whether `P` fits in a single 74LS00. Count
@@ -201,29 +184,9 @@ do not need chip or pin numbers. You will assign those at the breadboard.
 > **Build every circuit with the power supply off.** Turn it on only after you have checked your
 > wiring.
 
-### 5.2 NOT, AND, and OR from NAND Alone
+### 5.2 Function W, Built from NAND Only
 
-Place the 74LS00. Wire **pin 14 to +5 V and pin 7 to GND.** Build the three circuits from §3.2 in
-turn, taking each one down before building the next.
-
-1. **NOT.** One gate, both inputs tied to `a`. Record the output for `a` = 0 and `a` = 1.
-2. **AND.** Two gates. Record the output for all four combinations of `a` and `b`.
-3. **OR.** Three gates. Record the output for all four combinations of `a` and `b`.
-
-Each table must match the corresponding gate from Lab 1. That is the whole claim of §3.1, measured.
-
-### 5.3 NOT, OR, and AND from NOR Alone
-
-Power off. Take down the NAND circuit. Place the 74LS02 and power it, checking its pin numbers
-against §3.7. Build the three circuits from §3.3 in turn.
-
-1. **NOT.** One gate. Two rows.
-2. **OR.** Two gates. Four rows.
-3. **AND.** Three gates. Four rows.
-
-### 5.4 Function W, Built from NAND Only
-
-1. Power off. Take down the NOR circuit. Place the 74LS00 and power it.
+1. Power off. Place the 74LS00. Wire **pin 14 to +5 V and pin 7 to GND.**
 2. Build `W` from your pre-lab §1 diagram.
 3. Bring `a`, `b`, `c`, and `d` out to four jumper wires.
 4. Power on and record `W` for the twelve rows below, the same twelve as Lab 4 §5.2.
@@ -246,7 +209,7 @@ against §3.7. Build the three circuits from §3.3 in turn.
 5. Copy your Lab 4 measured column for `W` alongside. All twelve rows must agree. Two circuits
    with different gates, different chips, and different gate counts implement one function.
 
-### 5.5 Function P, Built from NAND Only
+### 5.3 Function P, Built from NAND Only
 
 1. Power off. Take down `W`.
 2. Build `P` from your pre-lab §2 diagram on the same 74LS00.
@@ -269,13 +232,13 @@ against §3.7. Build the three circuits from §3.3 in turn.
 5. Record how many of the four gates on the 74LS00 you used, and how many chips the Lab 4 version
    of the same function needed.
 
-### 5.6 Cost Comparison
+### 5.4 Cost Comparison
 
 Fill in the comparison table in the report. The all-NAND counts come from your pre-lab; the Lab 4
 figures come from your Lab 4 pre-lab. Note which version uses more gates and which uses more
 packages.
 
-### 5.7 Shut Down
+### 5.5 Shut Down
 
 Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
@@ -283,6 +246,6 @@ Turn off the supply, disconnect the leads, and return the ICs to your kit.
 
 Fill in the report and hand it in at the end of the lab.
 
-Your report must include the six measured tables from §5.2 and §5.3, the `W` and `P` tables with
-the Lab 4 columns beside them, and the cost comparison from §5.6. Your logic diagrams stay on the
-pre-lab you submitted on Canvas. Do not redraw them here.
+Your report must include the `W` and `P` tables with the Lab 4 columns beside them and the cost
+comparison from §5.4. Your logic diagrams stay on the pre-lab you submitted on Canvas. Do not
+redraw them here.
