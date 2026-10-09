@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 5 Report</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<h1 class="title">EE 210L: Digital Circuits and Logic Design Lab</h1>
+<h2 class="subtitle">Lab 5: NAND and NOR as Universal Gates</h2>
+
+<div class="idrow">
+  <div class="idfield">Name: <span class="blank"></span></div>
+  <div class="idfield">Date: <span class="blank"></span></div>
+</div>
+<div class="idrow">
+  <div class="idfield">Partner(s): <span class="blank"></span></div>
+  <div class="idfield">Section: <span class="blank"></span></div>
+</div>
+
+<p class="instructions">Record logic levels only, 0 or 1. Logic diagrams stay on your Canvas pre-lab; carry only expressions and counts across. The Lab 4 columns come from your own Lab 4 report.</p>
+
+<div class="part">
+  <h3 class="parthead">Part 4: Carried Over from the Pre-Lab</h3>
+  <table class="wide">
+    <tr><th>Function</th><th>Expression</th></tr>
+    <tr><td>W, minimum SOP from Lab 4</td><td></td></tr>
+    <tr><td>W, as a nest of NAND operations</td><td></td></tr>
+    <tr><td>P, the form you built in Lab 4</td><td></td></tr>
+    <tr><td>P, as a nest of NAND operations</td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.1: Power Supply Setup</h3>
+  <div class="field">Measured power supply voltage: <span class="blank"></span> <span class="unit">V</span></div>
+  <div class="field">Current limit setting: <span class="blank"></span> <span class="unit">mA</span></div>
+</div>
+
+<div class="part newpage">
+  <h3 class="parthead">Part 5.2: Function W, Built from NAND Only</h3>
+  <div class="field">NAND gates used <span class="blank"></span> &nbsp; 74LS00 packages <span class="blank"></span></div>
+  <table class="wide">
+    <tr><th>#</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Predicted W</th><th>Measured W, all-NAND</th><th>Measured W, Lab 4</th></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td>0</td><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td>1</td><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+    <tr><td>10</td><td>1</td><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td>1</td><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>12</td><td>1</td><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">All twelve rows agree across two circuits with different gates and different chips. State what that shows about the conversion in &sect;3.4.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.3: Function P, Built from NAND Only</h3>
+  <div class="field">NAND gates used <span class="blank"></span> &nbsp; of the four on the 74LS00 &nbsp;&nbsp; Chips the Lab 4 version needed <span class="blank"></span></div>
+  <table class="wide">
+    <tr><th>#</th><th>Digit</th><th>a</th><th>b</th><th>c</th><th>d</th><th>Predicted P</th><th>Measured P, all-NAND</th><th>Measured P, Lab 4</th></tr>
+    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Part 5.4: Cost Comparison</h3>
+  <p class="note">Count 2-input gates. Count inverters as gates here, since a NAND inverter is one of the four on the package.</p>
+  <table class="wide">
+    <tr><th>Function</th><th>Version</th><th>Gates</th><th>Packages</th><th>Part numbers used</th></tr>
+    <tr><td>W</td><td>Lab 4, AND-OR</td><td></td><td></td><td></td></tr>
+    <tr><td>W</td><td>All-NAND</td><td></td><td></td><td></td></tr>
+    <tr><td>P</td><td>Lab 4, AND-OR-NOT</td><td></td><td></td><td></td></tr>
+    <tr><td>P</td><td>All-NAND</td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="q">Which version uses more gates, and which uses more packages? Which of the two numbers would decide the cost of a thousand boards?</p>
+  <div class="lines"><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="part">
+  <h3 class="parthead">Discussion and Conclusions</h3>
+  <p>Summarize what you built and what it confirmed. Address at least: what makes a gate universal, why the SOP to NAND conversion leaves the wiring unchanged, and why a design built from one part number can be cheaper than the same design built from three even when it uses more gates.</p>
+  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<div class="footnote">For SSU EE 210L student use only. Please do not distribute. Dr. Shrestha, Sonoma State University.</div>
+
+</body>
+</html>
