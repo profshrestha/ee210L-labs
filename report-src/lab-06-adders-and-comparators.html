@@ -19,43 +19,10 @@
   <div class="idfield">Section: <span class="blank"></span></div>
 </div>
 
-<p class="instructions">Record logic levels, 0 or 1, and the measured voltage where a column asks for it. Build the 74LS283 wiring table before you place the chip: its pin order is not sequential.</p>
+<p class="instructions">Record logic levels, 0 or 1. Build the 74LS283 wiring table before you place the chip: its pin order is not sequential.</p>
 
 <div class="part">
-  <h3 class="parthead">Part 5.1: Half Adder</h3>
-  <table class="wide">
-    <tr><th>A</th><th>B</th><th>V at S (V)</th><th>S</th><th>V at C (V)</th><th>C</th><th>Expected S</th><th>Expected C</th></tr>
-    <tr><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  </table>
-</div>
-
-<div class="part">
-  <h3 class="parthead">Part 5.2: Full Adder</h3>
-  <div class="figblock">
-    <p class="note">Draw the full adder circuit you built. Label every gate and pin.</p>
-    <div class="box"></div>
-    <p class="caption">Figure 1: Full adder built from gates.</p>
-  </div>
-  <table class="wide tight">
-    <tr><th>A</th><th>B</th><th>C<sub>in</sub></th><th>V at S (V)</th><th>S</th><th>V at C<sub>out</sub> (V)</th><th>C<sub>out</sub></th><th>Expected S</th><th>Expected C<sub>out</sub></th></tr>
-    <tr><td>0</td><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>1</td><td>0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  </table>
-  <p class="q">Two rows have S = 1 but different C<sub>out</sub>. Name them, and say why a half adder cannot tell them apart.</p>
-  <div class="lines"><div class="line"></div><div class="line"></div></div>
-</div>
-
-<div class="part">
-  <h3 class="parthead">Part 5.3: Four-Bit Addition (74LS283)</h3>
+  <h3 class="parthead">Part 5.1: Four-Bit Addition (74LS283)</h3>
   <p class="note">Wiring table first. A1/B1/&Sigma;1 are the least significant bit.</p>
   <table class="wide">
     <tr><th>Bit</th><th>A pin</th><th>B pin</th><th>&Sigma; pin</th></tr>
@@ -77,11 +44,11 @@
 </div>
 
 <div class="part">
-  <h3 class="parthead">Part 5.4: Adder/Subtractor</h3>
+  <h3 class="parthead">Part 5.2: Adder/Subtractor</h3>
   <div class="figblock">
     <p class="note">Draw how the XOR gates and the control line connect to the 74LS283.</p>
     <div class="box"></div>
-    <p class="caption">Figure 2: Adder/subtractor built around the 74LS283.</p>
+    <p class="caption">Figure 1: Adder/subtractor built around the 74LS283.</p>
   </div>
   <table class="wide">
     <tr><th>Control</th><th>Operation</th><th>A</th><th>B</th><th>&Sigma;4 &Sigma;3 &Sigma;2 &Sigma;1</th><th>C4</th><th>Result as decimal</th><th>Expected</th></tr>
@@ -95,7 +62,7 @@
 </div>
 
 <div class="part">
-  <h3 class="parthead">Part 5.5: Magnitude Comparator (74LS85)</h3>
+  <h3 class="parthead">Part 5.3: Magnitude Comparator (74LS85)</h3>
   <div class="field">Cascade inputs for standalone operation: pin 4 = <span class="blank"></span> &nbsp; pin 2 = <span class="blank"></span> &nbsp; pin 3 = <span class="blank"></span></div>
   <table class="wide">
     <tr><th>#</th><th>A (bin)</th><th>B (bin)</th><th>A&gt;B out</th><th>A=B out</th><th>A&lt;B out</th><th>Correct relation?</th></tr>
@@ -110,7 +77,7 @@
 </div>
 
 <div class="part">
-  <h3 class="parthead">Part 5.5.1: Cascade Inputs Set Incorrectly</h3>
+  <h3 class="parthead">Part 5.3.1: Cascade Inputs Set Incorrectly</h3>
   <div class="field">With pin 3 tied to GND and A = B, the outputs read: A&gt;B = <span class="blank"></span> &nbsp; A=B = <span class="blank"></span> &nbsp; A&lt;B = <span class="blank"></span></div>
   <p class="q">Explain why the comparator behaves this way, and what the cascade inputs are actually for.</p>
   <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
