@@ -12,12 +12,16 @@ the point it is released. Labs 1 through 5 are already out and live on `main`.
 
 | # | Lab | Draft folder | Key Parts |
 |---|-----|---|-----------|
-| 6 | [Adders and Comparators](labs/lab-06-adders-and-comparators/README.md) | renamed, ready to release | 74LS283, 74LS85 |
+| 6 | Adders and Comparators | under review in `teaching-prep`, at `210L/lab-06-adders-and-comparators/` | 74LS283, 74LS85 |
 | 7 | [Multiplexers and Demultiplexers](labs/lab-03-multiplexers-and-demultiplexers/README.md) | `lab-03-...` | 74LS151, 74LS138 |
 | 8 | [Decoders and Encoders](labs/lab-04-decoders-and-encoders/README.md) | `lab-04-...` | 74LS138, 74LS148 |
 | 9 | [Latches and Flip-Flops](labs/lab-06-latches-and-flip-flops/README.md) | `lab-06-...` | 74LS279, 74LS74, 74LS73 |
 | 10 | [Shift Registers and Counters](labs/lab-07-shift-registers-and-counters/README.md) | `lab-07-...` | 74LS194, 74LS163, 74LS90 |
 | 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | `lab-11-...` | PYNQ-Z2 |
+
+Every report PDF is rendered from HTML in [`report-src/`](report-src/), which is where all of
+them live, Lab 6 included. The lab page and the report PDF are the two pieces that move when a
+lab is released; the HTML they came from stays here next to `report.css`.
 
 ### Drafted but not in the release plan
 
