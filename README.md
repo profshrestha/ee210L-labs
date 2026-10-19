@@ -6,19 +6,29 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 ## Labs
 
-| # | Lab | Key Parts |
-|---|-----|-----------|
-| 1 | [Logic Gates and Truth Tables](labs/lab-01-logic-gates-and-truth-tables/README.md) | 74LS00, 74LS02, 74LS04, 74LS08, 74LS32, 74LS86 |
-| 2 | [Boolean Simplification and K-Maps](labs/lab-02-boolean-simplification-and-k-maps/README.md) | Gate ICs from Lab 1 |
-| 3 | [Multiplexers and Demultiplexers](labs/lab-03-multiplexers-and-demultiplexers/README.md) | 74LS151, 74LS138 |
-| 4 | [Decoders and Encoders](labs/lab-04-decoders-and-encoders/README.md) | 74LS138, 74LS148 |
-| 5 | [Adders and Comparators](labs/lab-05-adders-and-comparators/README.md) | 74LS283, 74LS85 |
-| 6 | [Latches and Flip-Flops](labs/lab-06-latches-and-flip-flops/README.md) | 74LS279, 74LS74, 74LS73 |
-| 7 | [Shift Registers and Counters](labs/lab-07-shift-registers-and-counters/README.md) | 74LS194, 74LS163, 74LS90 |
-| 8 | [Combinational Logic in Verilog](labs/lab-08-combinational-logic-in-verilog/README.md) | Simulation only |
-| 9 | [Sequential Logic in Verilog](labs/lab-09-sequential-logic-in-verilog/README.md) | Simulation only |
-| 10 | [First FPGA Design](labs/lab-10-first-fpga-design/README.md) | PYNQ-Z2 |
-| 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | PYNQ-Z2 |
+The release order is the one in the `main` branch README, and the `#` column below follows it.
+Folder names still carry the number each lab had when it was drafted, so a folder is renamed at
+the point it is released. Labs 1 through 5 are already out and live on `main`.
+
+| # | Lab | Draft folder | Key Parts |
+|---|-----|---|-----------|
+| 6 | [Adders and Comparators](labs/lab-06-adders-and-comparators/README.md) | renamed, ready to release | 74LS283, 74LS85 |
+| 7 | [Multiplexers and Demultiplexers](labs/lab-03-multiplexers-and-demultiplexers/README.md) | `lab-03-...` | 74LS151, 74LS138 |
+| 8 | [Decoders and Encoders](labs/lab-04-decoders-and-encoders/README.md) | `lab-04-...` | 74LS138, 74LS148 |
+| 9 | [Latches and Flip-Flops](labs/lab-06-latches-and-flip-flops/README.md) | `lab-06-...` | 74LS279, 74LS74, 74LS73 |
+| 10 | [Shift Registers and Counters](labs/lab-07-shift-registers-and-counters/README.md) | `lab-07-...` | 74LS194, 74LS163, 74LS90 |
+| 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | `lab-11-...` | PYNQ-Z2 |
+
+### Drafted but not in the release plan
+
+These predate the current sequence and are held in case the plan changes.
+
+| Lab | Draft folder |
+|-----|---|
+| [Boolean Simplification and K-Maps](labs/lab-02-boolean-simplification-and-k-maps/README.md) | superseded by Lab 2 and Lab 4 on `main` |
+| [Combinational Logic in Verilog](labs/lab-08-combinational-logic-in-verilog/README.md) | `lab-08-...` |
+| [Sequential Logic in Verilog](labs/lab-09-sequential-logic-in-verilog/README.md) | `lab-09-...` |
+| [First FPGA Design](labs/lab-10-first-fpga-design/README.md) | `lab-10-...` |
 
 ## Lab Equipment
 

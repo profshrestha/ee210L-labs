@@ -1,6 +1,6 @@
-# Lab 5: Adders and Comparators
+# Lab 6: Adders and Comparators
 
-**[Download the Lab 5 Report (PDF)](EE210L-Lab5-Report.pdf)**
+**[Download the Lab 6 Report (PDF)](EE210L-Lab6-Report.pdf)**
 
 Check Canvas for deliverables, deadlines, and grading rubric.
 
@@ -124,7 +124,7 @@ nonsense for equal inputs.
 ```
 
 `A0`/`B0` are the least significant bits. Pins 2, 3, 4 are **inputs** (cascade); pins 5, 6,
-7 are the **outputs**. Do not mix them up.
+7 are the **outputs**. Check each pin number against this diagram as you wire it.
 
 ## 4. Pre-Lab
 
