@@ -32,13 +32,10 @@
     <tr><td>4, MSB</td><td></td><td></td><td></td></tr>
   </table>
   <table class="wide">
-    <tr><th>#</th><th>A (dec)</th><th>A (bin)</th><th>B (dec)</th><th>B (bin)</th><th>&Sigma;4 &Sigma;3 &Sigma;2 &Sigma;1</th><th>C4</th><th>Sum as decimal</th><th>4-bit result correct?</th></tr>
-    <tr><td>1</td><td>9</td><td>1001</td><td>6</td><td>0110</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>2</td><td>9</td><td>1001</td><td>11</td><td>1011</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>A (dec)</th><th>A (bin)</th><th>B (dec)</th><th>B (bin)</th><th>&Sigma;4 &Sigma;3 &Sigma;2 &Sigma;1</th><th>C4</th><th>Sum as decimal</th><th>4-bit result correct?</th></tr>
+    <tr><td>9</td><td>1001</td><td>6</td><td>0110</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td>1001</td><td>11</td><td>1011</td><td></td><td></td><td></td><td></td></tr>
   </table>
-  <p class="note">Choose rows 3 and 4 yourself. At least one of them should overflow.</p>
   <p class="q">How does C4 tell you that a 4-bit sum has overflowed?</p>
   <div class="lines"><div class="line"></div><div class="line"></div></div>
 </div>
@@ -55,7 +52,6 @@
     <tr><td>0</td><td>A + B</td><td>7</td><td>3</td><td></td><td></td><td></td><td></td></tr>
     <tr><td>1</td><td>A &minus; B</td><td>7</td><td>3</td><td></td><td></td><td></td><td></td></tr>
     <tr><td>1</td><td>A &minus; B</td><td>12</td><td>5</td><td></td><td></td><td></td><td></td></tr>
-    <tr><td>1</td><td>A &minus; B</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
   </table>
   <p class="q">What does C4 mean when the circuit is subtracting?</p>
   <div class="lines"><div class="line"></div><div class="line"></div></div>
@@ -74,13 +70,6 @@
     <tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
   </table>
   <p class="note">Include one pair with A &gt; B, one with A &lt; B, one with A = B, and one pair that differs only in the least significant bit.</p>
-</div>
-
-<div class="part">
-  <h3 class="parthead">Part 5.3.1: Cascade Inputs Set Incorrectly</h3>
-  <div class="field">With pin 3 tied to GND and A = B, the outputs read: A&gt;B = <span class="blank"></span> &nbsp; A=B = <span class="blank"></span> &nbsp; A&lt;B = <span class="blank"></span></div>
-  <p class="q">Explain why the comparator behaves this way, and what the cascade inputs are actually for.</p>
-  <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
 </div>
 
 <div class="part keep">
