@@ -13,7 +13,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 3 | [Minterms and SOP Implementation](labs/lab-03-minterms-and-sop/README.md) | Gate ICs from Lab 1 |
 | 4 | [Karnaugh Maps](labs/lab-04-karnaugh-maps/README.md) | Gate ICs from Lab 1 |
 | 5 | [NAND and NOR as Universal Gates](labs/lab-05-universal-gates/README.md) | 74LS00 |
-| 6 | Adders and Comparators | 74LS283, 74LS85 |
+| 6 | [Adders and Comparators](labs/lab-06-adders-and-comparators/README.md) | 74LS283, 74LS85 |
 | 7 | Multiplexers and Demultiplexers | 74LS151, 74LS138 |
 | 8 | Decoders and Encoders | 74LS138, 74LS148 |
 | 9 | Latches and Flip-Flops | 74LS279, 74LS74, 74LS73 |
