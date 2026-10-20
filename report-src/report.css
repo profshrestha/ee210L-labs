@@ -69,6 +69,10 @@ p + .lines, p + .idrow { break-before: avoid; }
 
 .footnote {
   position: fixed;
+  /* Leave this at 0. A negative offset to push it further into the bottom margin does
+     not work: Chrome repositions the repeated element and it lands at the top of the
+     page instead, over the first heading. A section whose table would otherwise reach
+     the footnote gets `newpage` on the section, which is the fix that works. */
   bottom: 0;
   left: 0.75in;
   right: 0.75in;

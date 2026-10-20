@@ -12,11 +12,20 @@ the point it is released. Labs 1 through 6 are already out and live on `main`.
 
 | # | Lab | Draft folder | Key Parts |
 |---|-----|---|-----------|
-| 7 | [Multiplexers and Demultiplexers](labs/lab-03-multiplexers-and-demultiplexers/README.md) | `lab-03-...` | 74LS151, 74LS138 |
-| 8 | [Decoders and Encoders](labs/lab-04-decoders-and-encoders/README.md) | `lab-04-...` | 74LS138, 74LS148 |
-| 9 | [Latches and Flip-Flops](labs/lab-06-latches-and-flip-flops/README.md) | `lab-06-...` | 74LS279, 74LS74, 74LS73 |
-| 10 | [Shift Registers and Counters](labs/lab-07-shift-registers-and-counters/README.md) | `lab-07-...` | 74LS194, 74LS163, 74LS90 |
-| 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | `lab-11-...` | PYNQ-Z2 |
+| 7 | Multiplexers and Demultiplexers | under review in `teaching-prep` | 74LS151, 74LS138 |
+| 8 | Decoders and Encoders | under review in `teaching-prep` | 74LS138, 74LS148 |
+| 9 | Latches and Flip-Flops | under review in `teaching-prep` | 74LS279, 74LS74, 74LS73 |
+| 10 | Shift Registers and Counters | under review in `teaching-prep` | 74LS194, 74LS163, 74LS90 |
+| 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | `lab-11-...`, **blocked**, see below | PYNQ-Z2 |
+
+Labs 7 through 10 have been renumbered, re-rendered and moved to `teaching-prep/210L/` for
+review. Their report sources stay here in [`report-src/`](report-src/) next to `report.css`.
+
+**Lab 11 is blocked.** As drafted it asks students to bring `counter4.v`, `shift4.v` and a ring
+counter written in the old Lab 9, and it links to the old Lab 10 for constraints files. Both of
+those labs, and the old Lab 8, are the Verilog and first-FPGA labs that the current release plan
+drops. Releasing Lab 11 as it stands would ask for work that is never assigned. It needs either
+those labs put back, or a rewrite that reaches the board without them.
 
 Each lab's report PDF is rendered from HTML in [`report-src/`](report-src/). A released lab
 takes three files to `main`: the lab page, the report PDF, and that HTML. Until then all three
