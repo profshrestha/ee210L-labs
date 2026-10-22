@@ -8,18 +8,18 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 
 The release order is the one in the `main` branch README, and the `#` column below follows it.
 Folder names still carry the number each lab had when it was drafted, so a folder is renamed at
-the point it is released. Labs 1 through 6 are already out and live on `main`.
+the point it is released. Labs 1 through 7 are already out and live on `main`.
 
 | # | Lab | Draft folder | Key Parts |
 |---|-----|---|-----------|
-| 7 | Multiplexers and Demultiplexers | under review in `teaching-prep` | 74LS151, 74LS138 |
 | 8 | Decoders and Encoders | under review in `teaching-prep` | 74LS138, 74LS148 |
 | 9 | Latches and Flip-Flops | under review in `teaching-prep` | 74LS279, 74LS74, 74LS73 |
 | 10 | Shift Registers and Counters | under review in `teaching-prep` | 74LS194, 74LS163, 74LS90 |
 | 11 | [Counters and Memory on the FPGA](labs/lab-11-counters-and-memory-on-fpga/README.md) | `lab-11-...`, **blocked**, see below | PYNQ-Z2 |
 
-Labs 7 through 10 have been renumbered, re-rendered and moved to `teaching-prep/210L/` for
-review. Their report sources stay here in [`report-src/`](report-src/) next to `report.css`.
+Labs 8 through 10 have been renumbered, re-rendered and are under review in
+`teaching-prep/210L/`. Their report sources stay here in [`report-src/`](report-src/) next
+to `report.css`.
 
 **Lab 11 is blocked.** As drafted it asks students to bring `counter4.v`, `shift4.v` and a ring
 counter written in the old Lab 9, and it links to the old Lab 10 for constraints files. Both of
