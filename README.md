@@ -14,7 +14,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 4 | [Karnaugh Maps](labs/lab-04-karnaugh-maps/README.md) | Gate ICs from Lab 1 |
 | 5 | [NAND and NOR as Universal Gates](labs/lab-05-universal-gates/README.md) | 74LS00 |
 | 6 | [Adders and Comparators](labs/lab-06-adders-and-comparators/README.md) | 74LS283, 74LS85 |
-| 7 | Multiplexers and Demultiplexers | 74LS151, 74LS138 |
+| 7 | [Multiplexers and Demultiplexers](labs/lab-07-multiplexers-and-demultiplexers/README.md) | 74LS151, 74LS138 |
 | 8 | Decoders and Encoders | 74LS138, 74LS148 |
 | 9 | Latches and Flip-Flops | 74LS279, 74LS74, 74LS73 |
 | 10 | Shift Registers and Counters | 74LS194, 74LS163, 74LS90 |
@@ -49,6 +49,9 @@ Lab 11 uses the **PYNQ-Z2** board (Xilinx Zynq XC7Z020, part `xc7z020clg400-1`) 
 | 74LS194 | Universal shift register |
 | 74LS279 | Quad SR latch |
 | 74LS283 | 4-bit full adder |
+
+Lab 7 also needs **3 LEDs and 3 resistors of 470 Ω**. Later labs reuse them, so keep them
+with the kit.
 
 ## Before Every Lab
 
