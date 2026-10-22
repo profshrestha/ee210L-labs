@@ -31,13 +31,18 @@ Each lab's report PDF is rendered from HTML in [`report-src/`](report-src/). A r
 takes three files to `main`: the lab page, the report PDF, and that HTML. Until then all three
 stay here.
 
+**This branch holds only unreleased material.** Once a lab is released to `main`, or moved
+to `teaching-prep` for review, its draft copy here is deleted. Keeping a second copy around
+is how an edit ends up in the wrong file, and labs 8 to 10 had already drifted apart from
+their reviewed copies before this was cleaned up.
+
 ### Drafted but not in the release plan
 
 These predate the current sequence and are held in case the plan changes.
 
 | Lab | Draft folder |
 |-----|---|
-| [Boolean Simplification and K-Maps](labs/lab-02-boolean-simplification-and-k-maps/README.md) | superseded by Lab 2 and Lab 4 on `main` |
+| [Boolean Simplification and K-Maps](labs/lab-02-boolean-simplification-and-k-maps/README.md) | superseded by Lab 2 and Lab 4 on `main`, kept as an archive |
 | [Combinational Logic in Verilog](labs/lab-08-combinational-logic-in-verilog/README.md) | `lab-08-...` |
 | [Sequential Logic in Verilog](labs/lab-09-sequential-logic-in-verilog/README.md) | `lab-09-...` |
 | [First FPGA Design](labs/lab-10-first-fpga-design/README.md) | `lab-10-...` |
