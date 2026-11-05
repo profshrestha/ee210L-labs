@@ -15,7 +15,7 @@ Check Canvas for deliverables, deadlines, and grading rubric.
 | 5 | [NAND and NOR as Universal Gates](labs/lab-05-universal-gates/README.md) | 74LS00 |
 | 6 | [Adders and Comparators](labs/lab-06-adders-and-comparators/README.md) | 74LS283, 74LS85 |
 | 7 | [Multiplexers and Demultiplexers](labs/lab-07-multiplexers-and-demultiplexers/README.md) | 74LS151, 74LS138 |
-| 8 | Decoders and Encoders | 74LS138, 74LS148 |
+| 8 | [Decoders and Encoders](labs/lab-08-decoders-and-encoders/README.md) | 74LS138, 74LS148 |
 | 9 | Latches and Flip-Flops | 74LS279, 74LS74, 74LS73 |
 | 10 | Shift Registers and Counters | 74LS194, 74LS163, 74LS90 |
 | 11 | Counters on the FPGA | PYNQ-Z2 |
