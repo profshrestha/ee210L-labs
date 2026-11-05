@@ -23,19 +23,19 @@
 
 <div class="part">
   <h3 class="parthead">Part 5.1: Decoder Truth Table</h3>
-  <p class="note">Any three address combinations.</p>
+
   <table>
     <tr><th>A2</th><th>A1</th><th>A0</th><th>Output that went LOW</th><th>Its measured V (V)</th><th>A HIGH output&rsquo;s V (V)</th></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
   </table>
 </div>
 
 <div class="part">
   <h3 class="parthead">Part 5.2: A Function from Decoder Outputs</h3>
   <p>F(A2,A1,A0) = &Sigma;m(1, 2, 4, 7)</p>
-  <p class="note">Any three address combinations, including at least one where F = 1 and one where F = 0.</p>
+
   <div class="figblock">
     <p class="note">Draw the gate arrangement you used to combine the four active-low decoder outputs. Label every pin.</p>
     <div class="box"></div>
@@ -43,21 +43,21 @@
   </div>
   <table>
     <tr><th>A2</th><th>A1</th><th>A0</th><th>Measured V<sub>out</sub> (V)</th><th>Logic Output</th><th>Expected F</th></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
   </table>
 </div>
 
 <div class="part">
   <h3 class="parthead">Part 5.3: Priority Encoder Basics</h3>
-  <p class="note">The no-request case, then any three inputs of your choosing.</p>
+
   <table class="wide">
     <tr><th>Input held LOW</th><th>A&#772;2</th><th>A&#772;1</th><th>A&#772;0</th><th>Decimal index<br>(after inverting)</th><th>G&#772;S</th><th>E&#772;O</th></tr>
     <tr><td>None (all HIGH)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;0</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>I&#772;7</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
   </table>
   <p class="q">With no input requesting, what distinguishes the output code from a genuine request on input 0?</p>
   <div class="lines"><div class="line"></div><div class="line"></div></div>

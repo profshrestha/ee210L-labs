@@ -33,6 +33,9 @@ table th { background: #dbe5f1; font-weight: bold; }
 table.wide td:first-child, table.wide th:first-child { text-align: left; }
 /* opt-in: shorter rows, for a long data table that needs to fit a page */
 table.tight th, table.tight td { padding: 2pt 6pt; }
+/* A cell left blank for handwriting collapses to its padding, which leaves it far shorter
+   than a row that happens to carry a label. Give empty cells the height of a text row. */
+table td:empty { height: 21pt; }
 
 .field { margin: 6pt 0; display: flex; align-items: baseline; gap: 6pt; break-inside: avoid; }
 .field .blank { flex: 1; border-bottom: 1px solid #000; height: 1em; max-width: 320pt; }
@@ -45,12 +48,12 @@ p + .lines, p + .idrow { break-before: avoid; }
 /* blank Karnaugh map grids: fixed cells sized for hand-drawn groups */
 .kmap { break-inside: avoid; margin: 8pt 0 10pt; }
 .kmap table { width: auto; margin: 0 auto 4pt; border-collapse: collapse; }
-.kmap td, .kmap th { border: 1px solid #000; width: 46pt; height: 34pt; padding: 0;
+.kmap table td, .kmap table th { border: 1px solid #000; width: 46pt; height: 34pt; padding: 0;
                      text-align: center; vertical-align: middle; }
-.kmap th { background: #dbe5f1; font-size: 10pt; height: 18pt; }
-.kmap th.corner, .kmap td.rowlab { background: #dbe5f1; width: 34pt; font-weight: bold;
+.kmap table th { background: #dbe5f1; font-size: 10pt; height: 18pt; }
+.kmap table th.corner, .kmap table td.rowlab { background: #dbe5f1; width: 34pt; font-weight: bold;
                                    font-size: 10pt; }
-.kmap th.corner { border: 1px solid #000; }
+.kmap table th.corner { border: 1px solid #000; }
 .kmaprow { display: flex; gap: 18pt; justify-content: center; break-inside: avoid; }
 .kmaprow .kmap { margin-top: 0; }
 
